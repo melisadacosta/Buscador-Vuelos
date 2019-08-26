@@ -1,0 +1,18 @@
+@import 'styles/styles';
+.services-container{
+    font-family: $main-font;
+    width: 215px;
+    .title{
+        font-size: 18px;
+        color: $main-color;
+    }
+    .text{
+        font-size: 14px;
+        color: $main-color-opacity;
+    }
+    .services-icon{
+        width: 30px;
+        height: 30px;
+        color: $main-color;
+    }
+}

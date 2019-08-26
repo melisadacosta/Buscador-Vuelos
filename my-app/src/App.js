@@ -12,6 +12,7 @@ import adantrip from 'assets/img/adantrip.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
+
 const App = () => (
     <>
         <BrowserRouter>
@@ -21,35 +22,32 @@ const App = () => (
                     <li>
                         <NavLink exact
                             to='/'
-                        // activeClassName='activo'
-                        // activeStyle={{ color: 'red' }}>
+                        activeClassName='activo'
                         >Hotels</NavLink>
                     </li>
                     <li>
                         <NavLink exact
                             to='/flights'
-                        // activeClassName='activo'
-                        // activeStyle={{ color: 'red' }}>
+                        activeClassName='activo'
                         >Rooms</NavLink>
                     </li>
                     <li>
                         <NavLink exact
                             to='/'
-                            // activeClassName='activo'
-                            activeStyle={{ color: 'red' }}>
-                            Flights</NavLink>
+                            activeClassName='activo'
+                            >Flights</NavLink>
                     </li>
                     <li>
                         <NavLink exact
                             to='/flights'
                             activeClassName='activo'
-                            activeStyle={{ color: 'red' }}>Cars</NavLink>
+                            >Cars</NavLink>
                     </li>
                     <li>
                         <NavLink exact
                             to='/flights'
                             activeClassName='activo'
-                            activeStyle={{ color: 'red' }}>Experiences</NavLink>
+                            >Experiences</NavLink>
                     </li>
                 </ul>
                 <ul className="nav-bar right">
@@ -57,55 +55,49 @@ const App = () => (
                         <NavLink exact
                             to='/flights'
                             activeClassName='activo'
-                            activeStyle={{ color: 'red' }}>USD</NavLink>
+                            >USD</NavLink>
                     </li>
                     <li>
                         <NavLink exact
                             to='/flights'
                             activeClassName='activo'
-                            activeStyle={{ color: 'red' }}></NavLink>
+                            ></NavLink>
                     </li>
                     <li className="menu-item"><FontAwesomeIcon icon={faUserCircle} />
                         <NavLink exact
                             to='/flights'
                             activeClassName='activo'
-                            activeStyle={{ color: 'red' }}>My Account</NavLink>
+                            >My Account</NavLink>
                         <ul className="sub-menu">
                             <li className="sub-menu-item">
                                 <NavLink exact
                                     to='/flights'
-                                    activeClassName='activo'
-                                    activeStyle={{ color: 'red' }}>Preferences</NavLink>
+                                    >Preferences</NavLink>
                             </li>
                             <li className="sub-menu-item">
                                 <NavLink exact
                                     to='/flights'
-                                    activeClassName='activo'
-                                    activeStyle={{ color: 'red' }}>Notifications</NavLink>
+                                    >Notifications</NavLink>
                             </li>
                             <li className="sub-menu-item">
                                 <NavLink exact
                                     to='/flights'
-                                    activeClassName='activo'
-                                    activeStyle={{ color: 'red' }}>Paymenth Methods</NavLink>
+                                    >Paymenth Methods</NavLink>
                             </li>
                             <li className="sub-menu-item">
                                 <NavLink exact
                                     to='/flights'
-                                    activeClassName='activo'
-                                    activeStyle={{ color: 'red' }}>Travelers</NavLink>
+                                    >Travelers</NavLink>
                             </li>
                             <li className="sub-menu-item">
                                 <NavLink exact
                                     to='/flights'
-                                    activeClassName='activo'
-                                    activeStyle={{ color: 'red' }}>History</NavLink>
+                                    >History</NavLink>
                             </li>
                             <li className="sub-menu-item">
                                 <NavLink exact
                                     to='/flights'
-                                    activeClassName='activo'
-                                    activeStyle={{ color: 'red' }}>Bookmarks</NavLink>
+                                    >Bookmarks</NavLink>
                             </li>
                         </ul>
                     </li>

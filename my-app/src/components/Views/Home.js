@@ -1,8 +1,7 @@
 import React from 'react'
 import Nav from 'components/Nav/Nav';
 import Flights from 'components/Flights/Flights';
-import { NavLink } from 'react-router-dom';
-
+import ServicesOptions from 'components/Services/ServicesOptions/ServicesOptions';
 
 const Home = () => (
     <>
@@ -22,6 +21,8 @@ const Home = () => (
             </ul> */}
         <Nav />
         <Flights />
+        <ServicesOptions />
+
     </>
 )
 

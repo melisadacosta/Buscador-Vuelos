@@ -78,7 +78,7 @@ class Flights extends React.Component {
                     </div>
                 ))
             }
-                <button onClick={this.loadFlights}>Cargar vuelos</button>
+                {/* <button onClick={this.loadFlights}>Cargar vuelos</button> */}
 
             </>)
     }

@@ -2,7 +2,7 @@ $main-font: 'Roboto', sans-serif;
 $main-color: #FFFFFF;
 $secondary-color: #ff6c2d;
 $background-color-nav: #0093d2;
-
+$main-color-opacity: #ffffffa9;
 // Menu principal
 
 .nav-container{
@@ -13,14 +13,14 @@ $background-color-nav: #0093d2;
     width: 1150px;
     justify-content: space-between;
     align-items: center;
-    margin-left: 80px;
+    margin: 0 auto;
     min-height: 50px;
-    margin-top: 0px;
+    border-bottom: 1px solid #ffffffa9;
     .logo-nav{
         display: flex;
         flex-direction: row;
         align-content: center;
-        padding: 0px 15px;
+        padding-right: 15px;
         img{
             width: 80px;
            height: 20px;
@@ -31,6 +31,7 @@ $background-color-nav: #0093d2;
     display: flex;
     align-items: center;
     margin: 0px;
+    padding: 0px;
     li{
        list-style: none;
        padding: 0px 15px;
@@ -52,8 +53,12 @@ $background-color-nav: #0093d2;
 }
 .menu-item{
     color: #ffffffa9;
-    &:hover{
-        color: $main-color;
+    line-height: 50px;
+    // &:hover{
+    //     color: $main-color;
+        &:hover .sub-menu { 
+            visibility: visible; 
+            color: $main-color;
     }
     .sub-menu { 
         position: absolute;
@@ -67,23 +72,26 @@ $background-color-nav: #0093d2;
         line-height: 50px;
         flex-direction: column;
         background-color: white;
-        // visibility: hidden;
+        visibility: hidden;
         .sub-menu-item {
+            &:hover{
+                    background-color:$background-color-nav;
+                    color: $main-color;
+                }
             a{
                 width: 150px;
             color: #000000;
             text-align: left;
             font-size: 13px;
                     &:hover{
-                            background-color:$background-color-nav;
-                            color: $main-color;
-                        }
-                    
+                        color: $main-color;
+                    }
                     }
                 }
                 }
-                    .menu-item:hover .sub-menu a{ 
-                        visibility: visible; 
-                    }
     }
+.activo{
+    border-bottom: 1px solid #ffffff;
 }
+}
+

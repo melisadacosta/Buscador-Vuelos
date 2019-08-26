@@ -1,0 +1,17 @@
+@import 'styles/styles';
+.SearchBar{
+    width: 1000px;
+    margin: 80px 105px;
+    font-family: $main-font;
+    h1{
+        font-size: 36px;
+        font-weight: 200;
+        color: $main-color;
+        margin-bottom: 0px;
+    }
+    p{
+        font-size: 16px;
+        color: $main-color;
+        font-weight: 200;
+    }
+}

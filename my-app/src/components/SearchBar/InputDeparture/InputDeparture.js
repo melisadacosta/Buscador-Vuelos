@@ -1,6 +1,6 @@
 import React from 'react'
 import './InputDeparture.scss'
-import Input from 'components/Input/Input';
+import Input, { INPUT_SIZES } from 'components/Input/Input';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const InputDeparture = () =>(
@@ -8,8 +8,9 @@ const InputDeparture = () =>(
         <Input
         icon= {faMapMarkerAlt}
         name='departure'
-        type= "text"
-        placeholder='Departure'/>
+        typeInput= "text"
+        placeholder='Departure'
+        type={INPUT_SIZES.BIG}/>
     </div>
 )
 

@@ -1,10 +1,7 @@
 @import 'styles/styles';
 
-.Input{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
+
+
     .input-icon{
         width: 20px;
         height: 20px;
@@ -12,11 +9,45 @@
     }
     input{
         font-size: 16px;
-        color: $main-color;
+        color: #ffffff;
         border: none !important;
         outline: none !important;
         height: 55px;
-        background-color: transparent;
+        background: none;
         padding-left: 15px;
     }
-}
+    input::placeholder{
+        font-family: 'Helvetica', sans-serif;
+   }
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: $main-color;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color: $main-color;
+       opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: $main-color;
+       opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: $main-color;
+    }
+    .small{
+        display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+        width: 170px;
+        height: 55px;
+        border-right: 1px solid #ffffff;
+    }
+    .big{
+        display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+        width: 215px;
+        height: 55px;
+        border-right: 1px solid #ffffff;
+    }

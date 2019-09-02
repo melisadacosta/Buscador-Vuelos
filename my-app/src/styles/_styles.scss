@@ -3,99 +3,10 @@ $main-color: #FFFFFF;
 $secondary-color: #ff6c2d;
 $background-color-nav: #0093d2;
 $main-color-opacity: #ffffffa9;
-// Menu principal
+$color-flags: #7A7A7A;
 
-.nav-container{
-    font-family: $main-font;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    width: 1150px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    min-height: 50px;
-    border-bottom: 1px solid #ffffffa9;
-    .logo-nav{
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        padding-right: 15px;
-        img{
-            width: 80px;
-           height: 20px;
-        }
-    }
-}
-.nav-bar{
-    display: flex;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    li{
-       list-style: none;
-       padding: 0px 15px;
-       font-family: 'Helvetica', sans-serif;
-       font-size: 13px;
-       a{
-            cursor: pointer;
-            color: #ffffffa9;
-            text-decoration: none;
-       &:hover{
-           color: $main-color;
-       }
-    }
-       .svg-inline--fa.fa-w-16 {
-        width: 20px;
-        height: 20px;
-        padding-right: 5px;
-    }
-}
-.menu-item{
-    color: #ffffffa9;
-    line-height: 50px;
-    // &:hover{
-    //     color: $main-color;
-        &:hover .sub-menu { 
-            visibility: visible; 
-            color: $main-color;
-    }
-    .sub-menu { 
-        position: absolute;
-        top: 50px;
-        padding: 0;
-        right: 80px;
-        width: 180px;
-        list-style: none;
-        z-index: 59;
-        display: flex;
-        line-height: 50px;
-        flex-direction: column;
-        background-color: white;
-        visibility: hidden;
-        .sub-menu-item {
-            &:hover{
-                    background-color:$background-color-nav;
-                    color: $main-color;
-                }
-            a{
-                width: 150px;
-            color: #000000;
-            text-align: left;
-            font-size: 13px;
-                    &:hover{
-                        color: $main-color;
-                    }
-                    }
-                }
-                }
-    }
-.activo{
-    border-bottom: 1px solid #ffffff;
-}
-}
 
-//Home
+
 // .Home{
-//     background-color: url(../assets/img/plate-flight-sky-sunset_1500x801.jpeg);
+//     background-image: url(../assets/img/plate-flight-sky-sunset_1500x801.jpeg);
 // }

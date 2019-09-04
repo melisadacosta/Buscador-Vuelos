@@ -1,7 +1,7 @@
 import React from 'react'
 import './NavCurrencies.scss'
 
-const NavCurrencies = ({ currency, popularcurrency }) => (
+const NavCurrencies = ({ currency }) => (
     <div className='NavCurrencies'>
         <ul>
             <li>

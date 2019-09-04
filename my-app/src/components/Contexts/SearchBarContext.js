@@ -24,7 +24,7 @@ class SearchBarContextProvider extends React.Component {
     state = {
         flights: []
     }
-    loadFlights = ({iataOrigin, iataDest, fromDate, toData, adults }) => {
+    loadFlights = (iataOrigin, iataDest, fromDate, toData, adults ) => {
         fetch('https://test.api.amadeus.com/v1/security/oauth2/token', {
             method: 'post',
             headers: {
@@ -44,21 +44,22 @@ class SearchBarContextProvider extends React.Component {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        // this.updateFlightsInfo(data.data)
+                        this.updateFlightsInfo(data.data)
                         console.log(data)
                     })
             })
     }
-    // updateFlightsInfo = data => {
-    //     const flightInfo = data.map(flight => {
-    //         return {
-    //             id: flight.id,
-    //             price: flight.price.total,
-    //             itineraries: flight.iteneraries
-    //         }
-    //     })
-    //     this.setState({ flights: flightInfo })
-    // }
+    updateFlightsInfo = data => {
+        const flightInfo = data.map(flight => {
+            return {
+                id: flight.id,
+                price: flight.price.total,
+                itineraries: flight.iteneraries
+                
+            }
+        })
+        this.setState({ flights: flightInfo })
+    }
     render() {
         return (
             <SearchBarContext.Provider
@@ -68,13 +69,13 @@ class SearchBarContextProvider extends React.Component {
                     updateFlightsInfo: this.updateFlightsInfo
                 }}>
 
-                {
+                {/* {
                     this.state.flights.map(flight => (
                         <div key={flight.id}>
                             <p>{flight.price}</p>
                         </div>
                     ))
-                }
+                } */}
                 {this.props.children}
             </SearchBarContext.Provider>
         )

@@ -6,10 +6,12 @@ import '../../styles/_styles.scss';
 import Footer from 'components/Footer/Footer';
 import InputContextProvider from 'components/Contexts/InputContext';
 import SearchBarContextProvider from 'components/Contexts/SearchBarContext';
+import Nav from 'components/Nav/Nav';
 
 
 const Home = () => (
     <div className='Home'>
+        <Nav />
         <InputContextProvider>
             <SearchBarContextProvider>
                 <SearchBar />

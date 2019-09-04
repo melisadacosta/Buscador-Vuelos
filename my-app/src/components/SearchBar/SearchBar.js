@@ -9,6 +9,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { InputContextConsumer } from 'components/Contexts/InputContext';
 import { SearchBarContextConsumer } from 'components/Contexts/SearchBarContext';
+import Button from './Button/Button';
 
 class SearchBar extends React.Component {
     render() {
@@ -34,18 +35,7 @@ class SearchBar extends React.Component {
                                         <InputPassengers
                                             onChange={updatetextAdults} value={textAdults} />
 
-                                        <SearchBarContextConsumer>
-                                            {
-                                                ({ loadFlights }) => (
-                                                    <div className='search'>
-                                                        <button onClick={() => loadFlights(textIataOrigin , textIataDest, 
-                                                            textFromDate, textToData, textAdults)} >
-                                                            <FontAwesomeIcon icon={faAngleRight} />
-                                                        </button>
-                                                    </div>
-                                                )
-                                            }
-                                        </SearchBarContextConsumer>
+                                        <Button />
 
                                     </div>
                                     <div className='input-check'>
@@ -61,7 +51,6 @@ class SearchBar extends React.Component {
                                     </div>
                                 </>
                             )
-
                     }
                 </InputContextConsumer>
             </div>

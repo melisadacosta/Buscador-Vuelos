@@ -5,7 +5,9 @@ import './Input.scss'
 
 export const INPUT_SIZES = {
     SMALL: 'small',
-    BIG: 'big'
+    BIG: 'big',
+    BIG_RESULTS: 'big-results',
+    SMALL_RESULTS: 'small-results'
 }
 
 

@@ -7,6 +7,21 @@ $color-flags: #7A7A7A;
 
 
 
-// .Home{
-//     background-image: url(../assets/img/plate-flight-sky-sunset_1500x801.jpeg);
-// }
+.Home{
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../assets/img/plate-flight-sky-sunset_1500x801.jpeg);
+}
+
+.FlightsResults{
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../assets/img/big-ben-bridge-castle-city-460672_1500x800.jpg);
+    height: 350px;
+}

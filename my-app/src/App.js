@@ -15,7 +15,7 @@ import Nav from 'components/Nav/Nav';
 const App = () => (
     <>
         <BrowserRouter>
-        <Nav />
+        
             {/* <div className="nav-container">
                 <ul className="nav-bar left">
                     <div className="logo-nav"><img src={adantrip} alt='' /></div>

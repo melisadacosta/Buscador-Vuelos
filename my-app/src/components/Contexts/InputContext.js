@@ -12,7 +12,6 @@ class InputContextProvider extends React.Component {
   }
   updatetextIataOrigin = event => {
     this.setState({ textIataOrigin: event.target.value })
-    console.log(event.target.value)
   }
   updatetextIataDest = event => {
     this.setState({ textIataDest: event.target.value })

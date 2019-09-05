@@ -11,7 +11,7 @@
           cursor: pointer;
           padding: 0;
           display: flex;
-          align-items: center;
+        //   align-items: center;
         }
         // Box.
         & + label:before {
@@ -80,6 +80,11 @@
                         font-size: 14px;
                     }
                 }
+            }
+            .item-span span{
+                color: $color-flags;
+                font-family: 'Helvetica', sans-serif;
+                font-size: 10px;
             }
              h3{
                 text-transform: uppercase;

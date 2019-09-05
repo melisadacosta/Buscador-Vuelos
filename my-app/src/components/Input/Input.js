@@ -13,7 +13,7 @@ export const INPUT_SIZES = {
 
 class Input extends React.Component {
     render() {
-        const { icon, name, type, typeInput, placeholder, onChange, value } = this.props
+        const { icon, name, type, typeInput, placeholder, onChange, value} = this.props
         return (
                 <div className={type}>
                     <FontAwesomeIcon

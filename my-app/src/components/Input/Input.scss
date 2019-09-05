@@ -58,6 +58,9 @@
         line-height: 45px;
         font-size: 15px;
         width: 180px;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
     }
     .big-results{
         background: rgba(255,255,255,0.2);
@@ -66,4 +69,7 @@
         line-height: 45px;
         font-size: 15px;
         width: 230px;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
     }

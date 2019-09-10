@@ -24,6 +24,7 @@ class SearchBarContextProvider extends React.Component {
     state = {
         flights: []
     }
+    
     loadFlights = (iataOrigin, iataDest, fromDate, toData, adults ) => {
         fetch('https://test.api.amadeus.com/v1/security/oauth2/token', {
             method: 'post',
@@ -45,7 +46,7 @@ class SearchBarContextProvider extends React.Component {
                     .then(res => res.json())
                     .then(data => {
                         this.updateFlightsInfo(data.data)
-                        console.log(data)
+                        console.log(data.data)
                     })
             })
     }
@@ -55,7 +56,6 @@ class SearchBarContextProvider extends React.Component {
                 id: flight.id,
                 price: flight.price.total,
                 itineraries: flight.iteneraries
-                
             }
         })
         this.setState({ flights: flightInfo })

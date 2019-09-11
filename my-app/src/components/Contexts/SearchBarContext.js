@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const API_KEY = "bMEJxLyCvtVEW9yd9CpEQ1OeKoTwATFQ";
 const API_SECRET = "K41txsGiVxxXS66V"
 
@@ -47,6 +48,7 @@ class SearchBarContextProvider extends React.Component {
                     .then(data => {
                         this.updateFlightsInfo(data.data)
                         console.log(data.data)
+                        
                     })
             })
     }
@@ -55,10 +57,12 @@ class SearchBarContextProvider extends React.Component {
             return {
                 id: flight.id,
                 price: flight.price.total,
-                itineraries: flight.iteneraries
+                itineraries: flight.itineraries
             }
         })
         this.setState({ flights: flightInfo })
+        console.log(flightInfo);
+        
     }
     render() {
         return (
@@ -68,14 +72,14 @@ class SearchBarContextProvider extends React.Component {
                     loadFlights: this.loadFlights,
                     updateFlightsInfo: this.updateFlightsInfo
                 }}>
+                    {/* <div>
 
-                {/* {
-                    this.state.flights.map(flight => (
-                        <div key={flight.id}>
-                            <p>{flight.price}</p>
-                        </div>
-                    ))
-                } */}
+                {
+                     this.state.flights.map(flight => 
+                        <CardFlight flight={flight} />)
+                    
+                }
+                    </div> */}
                 {this.props.children}
             </SearchBarContext.Provider>
         )

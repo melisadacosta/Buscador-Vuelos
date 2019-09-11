@@ -6,7 +6,7 @@ import SearchBarContextProvider from 'components/Contexts/SearchBarContext';
 import '../../styles/_styles.scss';
 import StopsCheckbox from 'components/CheckboxGroup/StopsCheckbox/StopsCheckbox';
 import FlightCheckbox from 'components/CheckboxGroup/FlightCheckbox/FlightCheckbox';
-import CardFlight from 'components/CardFlight/CardFlight';
+import CardFlight from 'components/Card/CardFlight/CardFlight'
 import CheckboxGroups from 'components/Checkbox/CheckboxGroups/CheckboxGroups';
 
 const FlightsResults = () => (
@@ -15,11 +15,9 @@ const FlightsResults = () => (
         <InputContextProvider>
             <SearchBarContextProvider>
         <SearchBarResults />
-                <CardFlight />
+        <CardFlight />
             </SearchBarContextProvider>
         </InputContextProvider>
-        {/* <StopsCheckbox />
-        <FlightCheckbox /> */}
         <CheckboxGroups />
     </div>
 )

@@ -13,9 +13,9 @@ const Home = () => (
     <div className='Home'>
         <Nav />
         <InputContextProvider>
-            <SearchBarContextProvider>
+            {/* <SearchBarContextProvider> */}
                 <SearchBar />
-            </SearchBarContextProvider>
+            {/* </SearchBarContextProvider> */}
         </InputContextProvider>
         <ServicesOptions />
         <Footer />

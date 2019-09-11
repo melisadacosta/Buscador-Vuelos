@@ -3,21 +3,16 @@ import { SearchBarContextConsumer } from 'components/Contexts/SearchBarContext'
 import CardFlight from 'components/Card/CardFlight/CardFlight'
 
 const Card = () =>(
-    <div className= 'CardFlight'>
+    <div className= 'Card'>
         <SearchBarContextConsumer>
-            <div>
             {
-                ({flight}) =>(
-                    <>
-                        {
+                ({flight}) =>( 
+                    
                      flight.map(flightInfo => 
                         <CardFlight flightInfo={flightInfo} />)
-                    
-                }
-                    </>
+            
                 )
             }
-            </div>
         </SearchBarContextConsumer>
      </div>
 )

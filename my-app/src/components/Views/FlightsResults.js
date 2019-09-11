@@ -13,10 +13,10 @@ const FlightsResults = () => (
     <div className='FlightsResults'>
         <Nav />
         <InputContextProvider>
-            <SearchBarContextProvider>
+            {/* <SearchBarContextProvider> */}
         <SearchBarResults />
         <CardFlight />
-            </SearchBarContextProvider>
+            {/* </SearchBarContextProvider> */}
         </InputContextProvider>
         <CheckboxGroups />
     </div>

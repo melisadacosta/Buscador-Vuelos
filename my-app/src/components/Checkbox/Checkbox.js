@@ -1,7 +1,8 @@
 import React from 'react'
 import './Checkbox.scss'
 
-class Checkbox extends React.Component { 
+
+class Checkbox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,13 +15,13 @@ class Checkbox extends React.Component {
         });
     };
     render() {
-        const { disabled, text, price, detail,title } = this.props;
+        const { disabled, text, price, detail, title, typeInput } = this.props;
         const { checked } = this.state;
-        
+
         return (
             <div className="React__checkbox">
                 <label>
-                <h3>{title}</h3>
+                    <h3>{title}</h3>
                     <input
                         type="checkbox"
                         className="React__checkbox--input"
@@ -28,17 +29,17 @@ class Checkbox extends React.Component {
                         disabled={disabled}
                         onChange={this._handleChange}
                     />
-                    
+
                     <span className="React__checkbox--span">
-                    <div className='items-column'>
-                        <div className='items'>
-                            <h4>{text}</h4>
-                            <p>{price}</p>
-                        </div>
-                        <div className='item-span'>
-                            <span>{detail}</span>
-                        </div>
-                    </div>
+                            <div className='items-column'>
+                                <div className='items'>
+                                    <h4>{text}</h4>
+                                    <p>{price}</p>
+                                </div>
+                                <div className='item-span'>
+                                    <p>{detail}</p>
+                                </div>
+                            </div>
                     </span>
                 </label>
             </div>

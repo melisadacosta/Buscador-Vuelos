@@ -1,9 +1,8 @@
 @import 'styles/styles';
-.React__checkbox{
-  margin-left: 80px;
-}
+
 .React__checkbox--input {
     display: none;
+    margin-bottom: 15px;
   }
   
   .React__checkbox--input {
@@ -18,7 +17,7 @@
       height: 16px;
       background: white;
       outline: 0.8px solid $color-flags;
-      margin-bottom: 15px;
+      margin-bottom: 17px;
     }
     &:checked {
       + span {
@@ -44,42 +43,50 @@
         }
       }
     }
-    // &:disabled {
-    //   + span {
-    //     background: black;
-    //   }
-    // }
   }
   .items-column{
     display: flex;
-    align-items: center;
+    align-items: end;
+    flex-direction: column;
+    
   .items{
     display: flex;
     display: flex;
-    width: 170px;
+    width: 195px;
     justify-content: space-between;
     margin-left: 30px;
+    line-height: 20px;
     h4, p{
         margin: 0px;
         color: $color-flags;
         font-family: 'Helvetica', sans-serif;
+    }
         p{
             font-size: 11px;
         }
         h4{
             font-size: 14px;
+            font-weight: 300;
         }
-    }
+    
 }
   }
-.item-span span{
+.item-span{
+  margin-left: 30px;
+  margin-bottom: 15px;
+ p{
     color: $color-flags;
     font-family: 'Helvetica', sans-serif;
     font-size: 10px;
+    margin-top: 0px;
+}
 }
  h3{
     text-transform: uppercase;
     font-size: 13px;
     color: #555555;
     font-family: $main-font;
+}
+.margin{
+  margin-bottom: 15px;
 }

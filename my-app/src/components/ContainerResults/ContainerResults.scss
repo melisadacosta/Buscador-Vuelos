@@ -1,0 +1,19 @@
+.ContainerResults{
+    width: 1170px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    justify-content: space-between;
+    .container-checkboxs{
+        width: 225px;
+    }
+    .list-results{
+        width: 650px;
+
+    }
+    .container-advertisement{
+        width: 225px;
+    }
+}

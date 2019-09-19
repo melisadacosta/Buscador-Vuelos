@@ -1,0 +1,58 @@
+@import 'styles/styles';
+.FooterFlightResults{
+    background-color: #FFFFFFFF;
+    display: flex;
+    margin: 0 auto;
+    .logo-container{
+        width: 230px;
+        .logo{
+            img{
+                width: 132px;
+            }
+        }
+        .detail-company{
+            p{
+                font-size: 11px;
+                color: #B3B3B3;
+                font-family: 'Helvetica', sans-serif;
+            }
+        }
+    }
+}
+h4{
+    font-size: 14px;
+    font-family: $main-font;
+    color: #333333;
+    margin-bottom: 8px;
+}
+.travel-mate-list, .explore-list, .book-list{
+    padding: 0px 15px;
+}
+.section-subscription{
+    background-color: $background-color-nav;
+    .container-subscription{
+        background-image: url(../../assets/img/footer_subscribe_bg.png);
+        z-index: 1;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        width: 340px;
+        height: 240px;
+    h3{
+        font-size: 14px;
+        color: #FFFFFFFF;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    p{
+        font-size: 13px;
+        color: #FFFFFFFF;
+        text-align: center;
+    }
+    .subscription-button{
+        width: 100px ;
+        height: 40px;
+        color: $secondary-color;
+    }
+    }
+}

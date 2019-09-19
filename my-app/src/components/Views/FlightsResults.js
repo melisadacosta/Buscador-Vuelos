@@ -5,6 +5,7 @@ import InputContextProvider from 'components/Contexts/InputContext';
 import '../../styles/_styles.scss';
 import Card from 'components/Card/Card'
 import ContainerResults from 'components/ContainerResults/ContainerResults';
+import FooterFlightResults from 'components/FooterFlightResults/FooterFlightResults';
 
 const FlightsResults = () => (
     <div className='FlightsResults'>
@@ -14,6 +15,7 @@ const FlightsResults = () => (
         <Card />
         </InputContextProvider>
         <ContainerResults />
+        <FooterFlightResults />
     </div>
 )
 

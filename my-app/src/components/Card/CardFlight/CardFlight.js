@@ -20,4 +20,5 @@ class CardFlight extends React.Component {
         )
         }
     }
+    
 export default CardFlight

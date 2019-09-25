@@ -1,10 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './SocialNetworks.scss'
 
-const SocialNetworks = ({icon}) =>(
+
+const SocialNetworks = ({icon, className}) =>(
     <div className='SocialNetworks'>
-            <ul className='iconsList'>
+            <ul className={className}>
                 <li>
                 <FontAwesomeIcon 
                 icon={icon}/>

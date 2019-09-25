@@ -1,13 +1,23 @@
 @import 'styles/styles';
 .FooterFlightResults{
+    .footer-container{
     background-color: #FFFFFFFF;
-    display: flex;
     margin: 0 auto;
+    width: 1170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     .logo-container{
         width: 230px;
+        padding-top: 20px;
         .logo{
             img{
                 width: 132px;
+                opacity: 0.5;
+                cursor: pointer;
+                &:hover{
+                    opacity: 1;
+                }
             }
         }
         .detail-company{
@@ -15,8 +25,12 @@
                 font-size: 11px;
                 color: #B3B3B3;
                 font-family: 'Helvetica', sans-serif;
+                line-height: 15px;
             }
         }
+    }
+    .travel-mate-list, .explore-list, .book-list{
+        padding-top: 20px;
     }
 }
 h4{
@@ -25,8 +39,6 @@ h4{
     color: #333333;
     margin-bottom: 8px;
 }
-.travel-mate-list, .explore-list, .book-list{
-    padding: 0px 15px;
 }
 .section-subscription{
     background-color: $background-color-nav;
@@ -36,23 +48,43 @@ h4{
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
-        width: 340px;
-        height: 240px;
+        width: 300px;
+        height: 225px;
+        display: flex;
+        padding-left: 40px;
+        padding-top: 15px;
+        flex-direction: column;
+    .button-subscription{
+        background: $secondary-color;
+        color: #fff;
+        width: 120px;
+        height: 40px;
+        font-family: $main-font;
+        font-size: 13px;
+        font-weight: 600;
+        border: none;
+    }
+        input{
+    border: none !important;
+    outline: none !important;
+    height: 34px;
+    width: 80%;
+    background-color: #FFFFFFFF;
+    margin-bottom: 15px;
+    }
+    
     h3{
         font-size: 14px;
         color: #FFFFFFFF;
         text-transform: capitalize;
-        text-align: center;
     }
     p{
         font-size: 13px;
         color: #FFFFFFFF;
-        text-align: center;
-    }
-    .subscription-button{
-        width: 100px ;
-        height: 40px;
-        color: $secondary-color;
+        margin-top: 0px;
     }
     }
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #555;
 }

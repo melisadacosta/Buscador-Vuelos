@@ -34,15 +34,19 @@ const Footer = () => (
         <div className='social'>
             <SocialNetworks
                 icon={faFacebookF}
+                className= 'iconsList'
             />
             <SocialNetworks
                 icon={faTwitter}
+                className= 'iconsList'
             />
             <SocialNetworks
                 icon={faGoogle}
+                className= 'iconsList'
             />
             <SocialNetworks
                 icon={faInstagram}
+                className= 'iconsList'
             />
         </div>
         </div>

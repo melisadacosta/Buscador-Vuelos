@@ -15,7 +15,9 @@ const FlightsResults = () => (
         <Card />
         </InputContextProvider>
         <ContainerResults />
+        <div className='footer-flightsresults'>
         <FooterFlightResults />
+        </div>
     </div>
 )
 

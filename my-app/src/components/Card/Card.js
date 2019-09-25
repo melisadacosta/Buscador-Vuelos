@@ -16,5 +16,4 @@ const Card = () =>(
         </SearchBarContextConsumer>
      </div>
 )
-
 export default Card

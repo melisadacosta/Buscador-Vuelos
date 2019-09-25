@@ -2,17 +2,19 @@ import React from 'react'
 import LinkFooterFlight from 'components/LinkFooterNav/LinkFooterFlight/LinkFooterFlight'
 import './FooterFlightResults.scss'
 import adantripblack from 'assets/img/adantrip-black.png'
-import ButtonFlight from 'components/ButtonFlight/ButtonFlight'
+import FooterBar from './FooterBar/FooterBar'
+
 
 const FooterFlightResults = () => (
     <div className='FooterFlightResults'>
+        <div className='footer-container'>
         <div className='logo-container'>
             <div className='logo'>
             <img src={adantripblack} />
             </div>
             <div className='detail-company'>
                 <p>Curabitur magnis cursus nam tempor quam risus urna mattis
-                    porttitor lorem urna dolor vitae hac.<br/>
+                    porttitor lorem urna dolor vitae hac.<br/><br/>
                     Ultrices lacinia aliquet euismod aptent netus dis praesent
                     magna elit ultricies malesuada volutpat amet lacus</p>
             </div>
@@ -93,15 +95,19 @@ const FooterFlightResults = () => (
             <div className='container-subscription'>
             <h3>Save up to 50% off your next trip</h3>
             <p>Subscribe to unlock our secret deals</p>
+            <form>
             <input type='e-mail' placeholder='Type your e-mail here'/>
-            <ButtonFlight
-                name='subscription'
-                type='submit'
-                className='subscription-button'
-                text='GET DEALS'
-            />
+            <button className='button-subscription'>
+                GET DEALS
+            </button>
+            </form>
             </div>
         </div>
+    </div>
+            
+    <div className='footer-bar'>
+        <FooterBar />
+    </div>
     </div>
 )
 

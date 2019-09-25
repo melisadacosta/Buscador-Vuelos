@@ -36,4 +36,26 @@
             color: $main-color-opacity;
         }
     }
-}
+    .iconsList{
+        display: flex;
+        justify-content: center;
+        padding-left: 15px;
+        li{
+            list-style: none;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.322);
+            cursor: pointer;
+            &:hover{
+                background-color: #0093d2;
+            }
+            svg{
+                color: white;
+                width: 13px;
+            }
+        }
+    }}

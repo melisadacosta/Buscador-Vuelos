@@ -3,6 +3,7 @@ import './ContainerResults.scss'
 import CheckboxGroups from 'components/Checkbox/CheckboxGroups/CheckboxGroups'
 import BarResults from 'components/BarResults/BarResults'
 import AdvertisementAside from 'components/AdvertisementAside/AdvertisementAside'
+import Card from 'components/Card/Card'
 
 const ContainerResults = () =>(
     <div className='ContainerResults'>
@@ -11,6 +12,7 @@ const ContainerResults = () =>(
         </aside>
         <main className='list-results'>
             <BarResults />
+            <Card />
         </main>
         <aside className='container-advertisement'>
             <AdvertisementAside />

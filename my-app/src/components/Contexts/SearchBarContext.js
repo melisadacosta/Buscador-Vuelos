@@ -39,7 +39,7 @@ class SearchBarContextProvider extends React.Component {
 
                 const accessToken = data.access_token;
 
-                fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${iataOrigin}&destinationLocationCode=${iataDest}&departureDate=${fromDate}&returnDate=${toData}&adults=${adults}&max=5`, {
+                fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${iataOrigin}&destinationLocationCode=${iataDest}&departureDate=${fromDate}&returnDate=${toData}&adults=${adults}&max=20`, {
                     headers: {
                         'Authorization': `Bearer ${accessToken}`
                     }
@@ -57,7 +57,8 @@ class SearchBarContextProvider extends React.Component {
             return {
                 id: flight.id,
                 price: flight.price.total,
-
+                classFlight:flight.travelerPricings[0].fareDetailsBySegment[0].cabin,
+                
                 first: {
                     originFulldate: flight.itineraries[0].segments[0].departure.at,
                     destinationFulldate: flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].arrival.at,
@@ -67,7 +68,8 @@ class SearchBarContextProvider extends React.Component {
                     originCount: flight.itineraries[0].segments.length,
                     originIntermediateIata: flight.itineraries[0].segments[0].arrival.iataCode,
                     originCarrierCode:flight.itineraries[0].segments[0].carrierCode,
-                    destinationCarrierCode:flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].carrierCode
+                    destinationCarrierCode:flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].carrierCode,
+                    
                 }, //Asegurarse que funcione independientemente de la cantidad de segmentos que haya por cada itinerario.
                 second: {
                     originFulldate: flight.itineraries[1].segments[0].departure.at,

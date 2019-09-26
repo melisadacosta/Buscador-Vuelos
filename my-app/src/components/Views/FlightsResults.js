@@ -12,7 +12,6 @@ const FlightsResults = () => (
         <Nav />
         <InputContextProvider>
         <SearchBarResults />
-        <Card />
         </InputContextProvider>
         <ContainerResults />
         <div className='footer-flightsresults'>

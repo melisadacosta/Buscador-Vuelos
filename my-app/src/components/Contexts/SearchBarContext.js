@@ -13,11 +13,7 @@ const item = {
     client_secret: API_SECRET
 };
 
-// let iataOrigin = 'EZE';
-// let iataDest = 'BBK';
-// let fromDate = '2020-01-01';
-// let toData = '2020-01-05';
-// let adults = 2;
+
 
 const SearchBarContext = React.createContext()
 

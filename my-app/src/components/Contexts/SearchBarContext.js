@@ -44,18 +44,16 @@ class SearchBarContextProvider extends React.Component {
                     .then(data => {
                         this.updateFlightsInfo(data.data)
                         console.log(data.data)
-                        
-                        const getCityNameOrigin = () =>{
-                            fetch(`https://airports-dpvsjndcod.now.sh/city/${textIataOrigin}`)
-                            .then(response => response.json())
-                            .then (data => console.log(data.state)
-                            )
-                        }
 
                     })
             })
     }
-    
+    //  getCityNameOrigin = () =>{
+    //     fetch(`https://airports-dpvsjndcod.now.sh/city/${textIataOrigin}`)
+    //     .then(response => response.json())
+    //     .then (data => console.log(data.data)
+    //     )
+    // }
     updateFlightsInfo = data => {
         const flightInfo = data.map(flight => {
             return {

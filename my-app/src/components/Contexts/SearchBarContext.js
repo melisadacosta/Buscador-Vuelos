@@ -20,10 +20,9 @@ const SearchBarContext = React.createContext()
 class SearchBarContextProvider extends React.Component {
     state = {
         flights: [],
-        images: []
     }
 
-    loadFlights = (iataOrigin, iataDest, fromDate, toData, adults) => {
+    loadFlights = (textIataOrigin, textIataDest, textFromDate, textToData, textAdults) => {
         fetch('https://test.api.amadeus.com/v1/security/oauth2/token', {
             method: 'post',
             headers: {
@@ -36,7 +35,7 @@ class SearchBarContextProvider extends React.Component {
 
                 const accessToken = data.access_token;
 
-                fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${iataOrigin}&destinationLocationCode=${iataDest}&departureDate=${fromDate}&returnDate=${toData}&adults=${adults}&max=20`, {
+                fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${textIataOrigin}&destinationLocationCode=${textIataDest}&departureDate=${textFromDate}&returnDate=${textToData}&adults=${textAdults}&max=20`, {
                     headers: {
                         'Authorization': `Bearer ${accessToken}`
                     }
@@ -45,13 +44,17 @@ class SearchBarContextProvider extends React.Component {
                     .then(data => {
                         this.updateFlightsInfo(data.data)
                         console.log(data.data)
+                        
+                        const getCityNameOrigin = () =>{
+                            fetch(`https://airports-dpvsjndcod.now.sh/city/${textIataOrigin}`)
+                            .then(response => response.json())
+                            .then (data => console.log(data.state)
+                            )
+                        }
 
-                    
                     })
             })
     }
-     
-   
     
     updateFlightsInfo = data => {
         const flightInfo = data.map(flight => {
@@ -99,7 +102,8 @@ class SearchBarContextProvider extends React.Component {
                 value={{
                     flight: this.state.flights,
                     loadFlights: this.loadFlights,
-                    updateFlightsInfo: this.updateFlightsInfo
+                    updateFlightsInfo: this.updateFlightsInfo,
+                    getCityNameOrigin: this.getCityNameOrigin
                 }}>
                 {this.props.children}
             </SearchBarContext.Provider>

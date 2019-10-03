@@ -1,0 +1,35 @@
+@import 'styles/styles';
+.time-date-container{
+    display: flex;
+    flex-direction: column;
+    .time-container{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        p{
+            font-family: $secondary-font;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #333333;
+            margin: 0px;
+            padding-right: 5px;
+        }
+        span{
+            font-family: $secondary-font;
+            font-weight: 400;
+            font-size: 10px;
+            color: #333333;
+            opacity: 0.5;
+        }
+    }
+    .date-container{
+        p{
+            font-family: $secondary-font;
+            font-size: 10px;
+            color: #333333;
+            margin: 0px;
+            opacity: 0.5;
+        }
+    }
+}

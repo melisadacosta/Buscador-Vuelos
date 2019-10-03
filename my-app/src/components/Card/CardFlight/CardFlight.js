@@ -1,61 +1,30 @@
 import React from 'react'
-import moment from "moment";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlane } from '@fortawesome/free-solid-svg-icons';
 import './CardFlight.scss'
+import OriginFullDate from './OriginFullDate/OriginFullDate';
+import PriceFlight from './PriceFlight/PriceFlight';
+import DestinationFullDate from './DestinationFullDate/DestinationFullDate';
+import Itinerary from './Itinerary/Itinerary';
 
 class CardFlight extends React.Component {
-    state = {
-        currentDate: new Date(),
-        markedDate: moment(new Date()).format("YYYY-MM-DD")
-    };
     render() {
         const { flightInfo } = this.props;
-        const date = moment(flightInfo.first.originFulldate).format('ll');
-        const time = moment(flightInfo.first.originFulldate).format('LT');
         return (
             <div className='CardFlight'>
-                <div className='time-date-container'>
-                    <div className='time-container'>
-                        <p>{time}</p>
-                    </div>
-                    <div className='date-container'>
-                        <p>{date}</p>
-                    </div>
+                <div className='origin-flight-container'>
+                <img className="carrierLogo" src={"https://content.airhex.com/content/logos/airlines_"+flightInfo.first.originCarrierCode+"_200_200_s.png"} alt='' />
+                    <OriginFullDate originFulldate={flightInfo.first.originFulldate} />
+                    <Itinerary originIata={flightInfo.first.originIata} totalDuration={flightInfo.first.totalDuration}
+                        originIntermediateIata={flightInfo.first.originIntermediateIata} destinationIata={flightInfo.first.destinationIata} />
+                    <DestinationFullDate destinationFulldate={flightInfo.first.destinationFulldate} />
+                    <PriceFlight price={flightInfo.price} classFlight={flightInfo.classFlight} />
                 </div>
-                <div className='scale-flight'>
-                    <div className='origin-flight'>
-                        <div className='icon-plane-origin'>
-                            <FontAwesomeIcon icon={faPlane} />
-                        </div>
-                        <div className='circle' />
-                        <div className='origin'>
-                            <p>{flightInfo.first.destinationIata}</p>
-                        </div>
-                    </div>
-                    <div className='flight-path-line' />
-                    <div className='destination-flight'>
-                    <div className='icon-plane-destination'>
-                            <FontAwesomeIcon icon={faPlane} />
-                        </div>
-                        <div className='circle' />
-                        <div className='origin'>
-                            <p>{flightInfo.second.destinationIata}</p>
-                        </div>
-                    </div>
+                <div className='return-flight-container'>
+                    <img className="carrierLogo" src={"https://content.airhex.com/content/logos/airlines_"+flightInfo.second.originCarrierCode+"_200_200_s.png"} alt='' />
+                    <OriginFullDate originFulldate={flightInfo.second.originFulldate} />
+                    <Itinerary originIata={flightInfo.second.originIata} totalDuration={flightInfo.second.totalDuration}
+                        originIntermediateIata={flightInfo.second.originIntermediateIata} destinationIata={flightInfo.second.destinationIata} />
+                    <DestinationFullDate destinationFulldate={flightInfo.second.destinationFulldate} />
                 </div>
-                <div className='price-container'>
-                    <div className='price'>
-                        <p>${flightInfo.price}</p>
-                    </div>
-                    <div className='class-flight'>
-                        <p>{flightInfo.classFlight}</p>
-                    </div>
-                    <button className='button-booknow'>
-                        Book Now
-            </button>
-                </div>
-                {/* <OriginFullDate /> */}
             </div>
         )
     }

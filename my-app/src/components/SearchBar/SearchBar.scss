@@ -30,6 +30,7 @@
             background-color: #ff6c2d;
             width: 75px;
             height: 57px;
+            cursor: pointer;
         }
             svg {
                 color: $main-color;
@@ -37,38 +38,5 @@
                 height: 25px;
                 }
         
-    }
-    .input-check{
-        display: flex;
-        font-family: $main-font;
-        font-size: 14px;
-        color: $main-color;
-        position: relative;
-        margin-top: 15px;
-        .container{
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-             input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-              }
-            .checkmark {
-                height: 6px;
-                width: 6px;
-                border: 1px solid $main-color;
-                border-radius: 50%;
-              }
-        }
-    }
-    .container input:checked ~ .checkmark {
-        background-color: $secondary-color;
-        border: none;
-      }
-      
+    } 
 }

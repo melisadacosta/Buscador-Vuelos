@@ -15,7 +15,7 @@ class Checkbox extends React.Component {
         });
     };
     render() {
-        const { disabled, text, price, detail, title, typeInput } = this.props;
+        const { disabled, text, price, title, detail } = this.props;
         const { checked } = this.state;
 
         return (
@@ -36,11 +36,12 @@ class Checkbox extends React.Component {
                                     <h4>{text}</h4>
                                     <p>{price}</p>
                                 </div>
-                                <div className='item-span'>
-                                    <p>{detail}</p>
-                                </div>
+                                
                             </div>
                     </span>
+                    <div className='item-span'>
+                                    <p>{detail}</p>
+                                </div>
                 </label>
             </div>
         );

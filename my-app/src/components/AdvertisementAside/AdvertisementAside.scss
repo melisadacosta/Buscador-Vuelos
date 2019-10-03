@@ -1,0 +1,24 @@
+.AdvertisementAside{
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    margin-left: 15px;
+    .advertisement{
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        position: relative;
+        background: #fff;
+        margin-bottom: 15px;
+        p{
+            font-size: 9px;
+            color: #a6a6a6;
+            position: absolute;
+            top: -5px;
+            left: 13px;
+        }
+        img{
+            margin-top: 15px;
+        }
+    }
+}

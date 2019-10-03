@@ -10,7 +10,7 @@ const FooterFlightResults = () => (
         <div className='footer-container'>
         <div className='logo-container'>
             <div className='logo'>
-            <img src={adantripblack} />
+            <img src={adantripblack} alt=''/>
             </div>
             <div className='detail-company'>
                 <p>Curabitur magnis cursus nam tempor quam risus urna mattis

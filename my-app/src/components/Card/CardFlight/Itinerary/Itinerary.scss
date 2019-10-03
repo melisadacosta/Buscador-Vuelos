@@ -1,0 +1,72 @@
+@import 'styles/styles';
+.Itinerary{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+.origin-flight, .destination-flight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+.origin{
+    p{
+        font-family: $secondary-font;
+        font-size: 9px;
+        color: #333333;
+        font-weight: 300;
+    }
+}
+.circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $background-color-nav;
+    margin-bottom: 8px;
+}
+.icon-plane-origin{
+    transform: rotate(-45deg);
+    color: #B3B3B3;
+    margin-bottom: 10px;
+    svg{
+
+        width: 15px;
+    }
+}
+.icon-plane-destination{
+    transform: rotate(45deg);
+    color: #B3B3B3;
+    margin-bottom: 10px;
+    svg{
+
+        width: 15px;
+    }
+}
+}
+.flight-path-line{
+width: 170px;
+height: 2px;
+background: #B3B3B3;
+}
+.scale-flight-return{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+.intermediate-flight{
+position: absolute;
+left: 75px;
+top: 0px;
+font-size: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+.circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #B3B3B3;
+    margin-bottom: 8px;
+}
+}
+}

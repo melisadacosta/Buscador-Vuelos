@@ -1,0 +1,33 @@
+@import 'styles/styles';
+.PriceFlight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .price{
+        p{
+            font-family: $main-font;
+            font-size: 22px;
+            color: #333333;
+            margin: 0px;
+        }
+    }
+    .class-flight{
+        p{
+            font-family: $secondary-font;
+            font-size: 10px;
+            margin: 0px;
+            text-transform: lowercase;
+            color: #B3B3B3;
+        }
+    }
+    .button-booknow{
+        background: $secondary-color;
+        color: #fff;
+        width: 85px;
+        height: 30px;
+        font-family: $main-font;
+        font-size: 11px;
+        font-weight: 600;
+        border: none;
+    }
+}

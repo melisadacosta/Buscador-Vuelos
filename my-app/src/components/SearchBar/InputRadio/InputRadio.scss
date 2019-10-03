@@ -1,0 +1,39 @@
+@import 'styles/styles';
+.RadioContainer{
+    display: flex;
+    flex-direction: row;
+.input-check{
+        display: flex;
+        font-family: $main-font;
+        font-size: 14px;
+        color: $main-color;
+        position: relative;
+        margin-top: 15px;
+        .container{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding-right: 15px;
+             input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+              }
+            .checkmark {
+                height: 7px;
+                width: 7px;
+                border: 1px solid $main-color;
+                border-radius: 50%;
+                margin-right: 5px;
+              }
+        }
+    }
+    .container input:checked ~ .checkmark {
+        background-color: $secondary-color;
+        border: none;
+      }
+}

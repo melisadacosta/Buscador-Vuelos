@@ -1,110 +1,96 @@
 @import 'styles/styles';
 .CardFlight{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background: #fff;
     margin-bottom: 15px;
-    justify-content: space-evenly;
-    .time-date-container{
+    width: 620px;
+    padding: 20px 20px;
+    .origin-flight-container, .return-flight-container{
         display: flex;
-        flex-direction: column;
-        .time-container{
-            p{
-                font-family: $secondary-font;
-                font-size: 17px;
-                text-transform: uppercase;
-                font-weight: 600;
-                color: #333333;
-                margin: 0px;
-            }
-        }
-        .date-container{
-            p{
-                font-family: $secondary-font;
-                font-size: 10px;
-                color: #333333;
-                margin: 0px;
-            }
-        }
-    }
-    .price-container{
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        margin-bottom: 15px;
+        justify-content: space-between;
         align-items: center;
-        .price{
-            p{
-                font-family: $main-font;
-                font-size: 22px;
-                color: #333333;
-                margin: 0px;
-            }
-        }
-        .class-flight{
-            p{
-                font-family: $secondary-font;
-                font-size: 10px;
-                margin: 0px;
-                text-transform: lowercase;
-                color: #B3B3B3;
-            }
-        }
-        .button-booknow{
-            background: $secondary-color;
-            color: #fff;
-            width: 85px;
-            height: 30px;
-            font-family: $main-font;
-            font-size: 11px;
-            font-weight: 600;
-            border: none;
+        .carrierLogo{
+                width: 50px ;
+                height: 50px;
         }
     }
-    .scale-flight{
+    .return-flight-container{
+        width: 495px;
+    }
+    .scale-flight, .scale-flight-return{
         display: flex;
         flex-direction: row;
         align-items: center;
-        .origin-flight, .destination-flight{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        .origin{
-            p{
-                font-family: $secondary-font;
-                font-size: 9px;
-                color: #333333;
-                font-weight: 300;
-            }
-        }
-        .circle{
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: $background-color-nav;
-            margin-bottom: 8px;
-        }
-        .icon-plane-origin{
-            transform: rotate(-45deg);
-            color: #B3B3B3;
-            margin-bottom: 10px;
-            svg{
-
-                width: 15px;
-            }
-        }
-        .icon-plane-destination{
-            transform: rotate(45deg);
-            color: #B3B3B3;
-            margin-bottom: 10px;
-            svg{
-
-                width: 15px;
-            }
-        }
+        position: relative;
     }
-    .flight-path-line{
-        width: 170px;
-        height: 2px;
-        color: #333333;
-    }
-}
+
+    // .scale-flight, .scale-flight-return{
+    //     .origin-flight, .destination-flight{
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //     .origin{
+    //         p{
+    //             font-family: $secondary-font;
+    //             font-size: 9px;
+    //             color: #333333;
+    //             font-weight: 300;
+    //         }
+    //     }
+    //     .circle{
+    //         width: 8px;
+    //         height: 8px;
+    //         border-radius: 50%;
+    //         background-color: $background-color-nav;
+    //         margin-bottom: 8px;
+    //     }
+    //     .icon-plane-origin{
+    //         transform: rotate(-45deg);
+    //         color: #B3B3B3;
+    //         margin-bottom: 10px;
+    //         svg{
+
+    //             width: 15px;
+    //         }
+    //     }
+    //     .icon-plane-destination{
+    //         transform: rotate(45deg);
+    //         color: #B3B3B3;
+    //         margin-bottom: 10px;
+    //         svg{
+
+    //             width: 15px;
+    //         }
+    //     }
+    // }
+    // .flight-path-line{
+    //     width: 170px;
+    //     height: 2px;
+    //     background: #B3B3B3;
+    // }
+    // .scale-flight-return{
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-evenly;
+    // }
+    // .intermediate-flight{
+    //     position: absolute;
+    //     left: 75px;
+    //     top: 0px;
+    //     font-size: 10px;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     .circle{
+    //         width: 8px;
+    //         height: 8px;
+    //         border-radius: 50%;
+    //         background-color: #B3B3B3;
+    //         margin-bottom: 8px;
+    //     }
+    // }
+// }
 }

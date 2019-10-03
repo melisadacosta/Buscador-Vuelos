@@ -17,7 +17,7 @@
       height: 16px;
       background: white;
       outline: 0.8px solid $color-flags;
-      margin-bottom: 17px;
+      margin-bottom: 8px;
     }
     &:checked {
       + span {
@@ -50,7 +50,6 @@
     flex-direction: column;
     
   .items{
-    display: flex;
     display: flex;
     width: 195px;
     justify-content: space-between;

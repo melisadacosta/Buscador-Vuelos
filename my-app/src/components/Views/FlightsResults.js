@@ -11,7 +11,7 @@ const FlightsResults = () => (
     <div className='FlightsResults'>
         <Nav />
         <InputContextProvider>
-        <SearchBarResults />
+            <SearchBarResults />
         </InputContextProvider>
         <ContainerResults />
         <div className='footer-flightsresults'>

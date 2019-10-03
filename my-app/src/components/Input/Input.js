@@ -12,6 +12,12 @@ export const INPUT_SIZES = {
 
 
 class Input extends React.Component {
+    state = {
+        text: ''
+    }
+    updateText = event => {
+        this.setState({ text: event.target.value })
+    }
     render() {
         const { icon, name, type, typeInput, placeholder, onChange, value} = this.props
         return (

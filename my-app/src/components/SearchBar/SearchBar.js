@@ -1,17 +1,20 @@
 import React from 'react';
 import './SearchBar.scss';
-import InputDeparture from './InputDeparture/InputDeparture';
-import InputArrival from './InputArrival/InputArrival';
-import InputDateStart from 'components/SearchBar/InputDateStart/InputDateStart';
-import InputDateEnd from './InputDateEnd/InputDateEnd';
-import InputPassengers from './InputPassengers/InputPassengers';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { withRouter } from 'react-router-dom'
 import { InputContextConsumer } from 'components/Contexts/InputContext';
-import { SearchBarContextConsumer } from 'components/Contexts/SearchBarContext';
-import Button from './Button/Button';
+import Input, { INPUT_SIZES } from 'components/Input/Input';
+import { SearchBarContextConsumer } from 'components/Contexts/SearchBarContext'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import InputRadio from './InputRadio/InputRadio';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 class SearchBar extends React.Component {
+    redirect = () => {
+        this.props.history.push('/flights')
+    }
     render() {
         return (
             <div className='SearchBar'>
@@ -24,31 +27,37 @@ class SearchBar extends React.Component {
                                     <h1>Cheap Flights Best Deals</h1>
                                     <p>Search hundreds of travel sites at once</p>
                                     <div className='input-group'>
-                                        <InputDeparture
+                                        <Input icon={faMapMarkerAlt} name={'departure'} typeInput={'text'}
+                                            placeholder={'Departure'} type={INPUT_SIZES.BIG}
                                             onChange={updatetextIataOrigin} value={textIataOrigin} />
-                                        <InputArrival
+                                        <Input icon={faMapMarkerAlt} name={'arrival'} typeInput={"text"}
+                                            placeholder={'Arrival'} type={INPUT_SIZES.BIG}
                                             onChange={updatetextIataDest} value={textIataDest} />
-                                        <InputDateStart
-                                            onChange={updatetextFromDate} value={textFromDate} />
-                                        <InputDateEnd
-                                            onChange={updatetextToDate} value={textToData} />
-                                        <InputPassengers
+                                        <Input icon={faCalendarAlt} name={'date'} typeInput={"date"}
+                                            type={INPUT_SIZES.SMALL} onChange={updatetextFromDate} value={textFromDate} />
+                                        <Input icon={faCalendarAlt} name={'date'} typeInput={"date"}
+                                            type={INPUT_SIZES.SMALL} onChange={updatetextToDate} value={textToData} />
+                                        <Input icon={faUserFriends} name={'departure'} typeInput={"number"}
+                                            placeholder={'1'} type={INPUT_SIZES.SMALL}
                                             onChange={updatetextAdults} value={textAdults} />
 
-                                        <Button />
+                                        <SearchBarContextConsumer>
+                                            {
+                                                ({ loadFlights }) => (
+                                                    <div className='search'>
+                                                        <button onClick={() => {
+                                                            loadFlights(textIataOrigin, textIataDest, textFromDate, textToData, textAdults)
+                                                            this.redirect()
+                                                        }}>
+                                                            <FontAwesomeIcon icon={faAngleRight} />
+                                                        </button>
+                                                    </div>
+                                                )
+                                            }
+                                        </SearchBarContextConsumer>
 
                                     </div>
-                                    <div className='input-check'>
-                                        <label className="container">Round Trip
-                        <input type="checkbox" checked="checked" />
-                                            <span className="checkmark"></span>
-                                        </label>
-
-                                        <label className="container">One Way
-                        <input type="checkbox" />
-                                            <span className="checkmark"></span>
-                                        </label>
-                                    </div>
+                                    <InputRadio />
                                 </>
                             )
                     }
@@ -57,4 +66,4 @@ class SearchBar extends React.Component {
         )
     }
 }
-export default SearchBar;
+export default withRouter(SearchBar)

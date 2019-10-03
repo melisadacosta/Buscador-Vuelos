@@ -19,10 +19,11 @@ const SearchBarContext = React.createContext()
 
 class SearchBarContextProvider extends React.Component {
     state = {
-        flights: []
+        flights: [],
+        images: []
     }
-    
-    loadFlights = (iataOrigin, iataDest, fromDate, toData, adults ) => {
+
+    loadFlights = (iataOrigin, iataDest, fromDate, toData, adults) => {
         fetch('https://test.api.amadeus.com/v1/security/oauth2/token', {
             method: 'post',
             headers: {
@@ -44,17 +45,21 @@ class SearchBarContextProvider extends React.Component {
                     .then(data => {
                         this.updateFlightsInfo(data.data)
                         console.log(data.data)
-                        
+
+                    
                     })
             })
     }
+     
+   
+    
     updateFlightsInfo = data => {
         const flightInfo = data.map(flight => {
             return {
                 id: flight.id,
                 price: flight.price.total,
-                classFlight:flight.travelerPricings[0].fareDetailsBySegment[0].cabin,
-                
+                classFlight: flight.travelerPricings[0].fareDetailsBySegment[0].cabin,
+
                 first: {
                     originFulldate: flight.itineraries[0].segments[0].departure.at,
                     destinationFulldate: flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].arrival.at,
@@ -63,10 +68,10 @@ class SearchBarContextProvider extends React.Component {
                     destinationIata: flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].arrival.iataCode,
                     originCount: flight.itineraries[0].segments.length,
                     originIntermediateIata: flight.itineraries[0].segments[0].arrival.iataCode,
-                    originCarrierCode:flight.itineraries[0].segments[0].carrierCode,
-                    destinationCarrierCode:flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].carrierCode,
+                    originCarrierCode: flight.itineraries[0].segments[0].carrierCode,
+                    // destinationCarrierCode: flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].carrierCode,
                     
-                }, //Asegurarse que funcione independientemente de la cantidad de segmentos que haya por cada itinerario.
+                },
                 second: {
                     originFulldate: flight.itineraries[1].segments[0].departure.at,
                     destinationFulldate: flight.itineraries[1].segments[flight.itineraries[1].segments.length - 1].arrival.at,
@@ -75,21 +80,19 @@ class SearchBarContextProvider extends React.Component {
                     destinationIata: flight.itineraries[1].segments[flight.itineraries[1].segments.length - 1].arrival.iataCode,
                     originCount: flight.itineraries[1].segments.length,
                     originIntermediateIata: flight.itineraries[1].segments[0].arrival.iataCode,
-                    originCarrierCode:flight.itineraries[1].segments[0].carrierCode,
-                    destinationCarrierCode:flight.itineraries[1].segments[flight.itineraries[0].segments.length - 1].carrierCode
-                } //Asegurarse que funcione independientemente de la cantidad de segmentos que haya por cada itinerario.
+                    originCarrierCode: flight.itineraries[1].segments[0].carrierCode,
+                    // destinationCarrierCode: flight.itineraries[1].segments[flight.itineraries[0].segments.length - 1].carrierCode
+                }
             }
-        })
+            
+        }
+        )
         this.setState({ flights: flightInfo })
         console.log(flightInfo);
         
     }
-    getImages = carrierCode => {
-        fetch(`https://content.airhex.com/content/logos/airlines_${carrierCode}_200_200_s.png`)
-        .then(response => response.json())
-        .then (res => console.log(res))
-    }
-    
+
+
     render() {
         return (
             <SearchBarContext.Provider

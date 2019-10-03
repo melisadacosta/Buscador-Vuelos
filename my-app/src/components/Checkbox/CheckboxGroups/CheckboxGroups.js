@@ -1,6 +1,7 @@
 import React from 'react'
-import Checkbox, { INPUT_MARGIN } from 'components/Checkbox/Checkbox'
+import Checkbox from 'components/Checkbox/Checkbox'
 import InputRangePrice from 'components/Checkbox/InputRangePrice/InputRangePrice'
+import './CheckboxGroups.scss'
 
 const CheckboxGroups = () => (
 

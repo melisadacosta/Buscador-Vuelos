@@ -7,7 +7,6 @@
         text-decoration: none;
         display: flex;
         flex-direction: row;
-        width: 1150px;
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
@@ -115,4 +114,25 @@
             }
         }
 }
+}
+
+@media (min-width: 1200px){
+    .nav-container{
+        width: 1150px
+    }
+}
+
+@media (min-width: 990px){
+    .nav-container{
+        width: 960px
+    }
+}
+
+@media (max-width: 990px){
+    .Nav{
+        background: #333333;
+        .nav-container{
+            width: 740px;
+        }
+    }
 }

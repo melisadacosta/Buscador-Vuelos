@@ -45,11 +45,17 @@ class SearchBar extends React.Component {
                                             {
                                                 ({ loadFlights }) => (
                                                     <div className='search'>
-                                                        <button onClick={() => {
+                                                        <button className='button-search' onClick={() => {
                                                             loadFlights(textIataOrigin, textIataDest, textFromDate, textToData, textAdults)
                                                             this.redirect()
                                                         }}>
                                                             <FontAwesomeIcon icon={faAngleRight} />
+                                                        </button>
+                                                        <button className='button-responsive' onClick={() => {
+                                                            loadFlights(textIataOrigin, textIataDest, textFromDate, textToData, textAdults)
+                                                            this.redirect()
+                                                        }}>
+                                                            Search
                                                         </button>
                                                     </div>
                                                 )

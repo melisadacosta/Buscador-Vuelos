@@ -1,7 +1,4 @@
 @import 'styles/styles';
-
-
-
     .input-icon{
         width: 20px;
         height: 20px;
@@ -35,18 +32,18 @@
     }
     .small{
         display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 10px;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
         width: 170px;
         height: 55px;
         border-right: 1px solid #ffffff;
     }
     .big{
         display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 10px;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
         width: 215px;
         height: 55px;
         border-right: 1px solid #ffffff;
@@ -72,4 +69,22 @@
         display: flex;
         align-items: center;
         margin-top: 5px;
+    }
+
+    @media (min-width: 990px){
+        .small{
+            width: 140px;
+        }
+        .big{
+            width: 185px;
+        }
+    }
+
+    @media (max-width: 990px){
+        .big, .small{
+            width: 720px;
+            border: 1px solid #ffffff;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
     }

@@ -1,7 +1,6 @@
 @import 'styles/styles';
 .SearchBar{
-    width: 1000px;
-    margin: 80px 105px;
+    margin: 70px auto;
     font-family: $main-font;
     h1{
         font-size: 36px;
@@ -21,9 +20,10 @@
         border-radius: 5px;
         box-shadow: inset 0 0 0 1000px rgba(8, 28, 36, 0.178);
         height: 57px;
+        width: 995px;
     }
     .search{
-        button{
+        .button-search{
             border: none !important;
             outline: none !important;
             border-radius: 0 3px 3px 0;
@@ -32,6 +32,19 @@
             height: 57px;
             cursor: pointer;
         }
+        .button-responsive{
+            display: none;
+            border: none !important;
+            outline: none !important;
+            border-radius: 0 3px 3px 0;
+            background-color: #ff6c2d;
+            height: 57px;
+            cursor: pointer;
+            font-family: $secondary-font;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
             svg {
                 color: $main-color;
                 width: 25px;
@@ -39,4 +52,39 @@
                 }
         
     } 
+}
+
+@media (min-width: 1200px){
+    .SearchBar{
+        width: 1150px;
+    }
+}
+
+@media (min-width: 990px){
+    .SearchBar{
+        width: 960px;
+        .input-group{
+            width: 845px;
+        }
+    }
+}
+
+@media (max-width: 990px){
+    .SearchBar{
+        width: 720px;
+        .input-group{
+            flex-direction: column;
+            border: none;
+            box-shadow: none;
+        }
+        .search{
+            .button-responsive{
+                display: block;
+                width: 730px;
+            }
+            .button-search{
+                display: none;
+            }
+    }
+}
 }

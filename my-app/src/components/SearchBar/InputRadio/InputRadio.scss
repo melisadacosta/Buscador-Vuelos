@@ -37,3 +37,14 @@
         border: none;
       }
 }
+@media (max-width: 990px){
+  .RadioContainer{
+    justify-content: center;
+    .input-check{
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 404px;
+    }
+  }
+}

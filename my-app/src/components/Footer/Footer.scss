@@ -1,15 +1,14 @@
 @import 'styles/styles';
 
 .Footer{
-    
     display: flex;
     flex-direction: column;
-    margin-left: 95px;
-    width: 1150px;
+    margin: 0px auto;
     justify-content: space-between;
     margin-top: 50px;
     .FooterLinks{
         display: flex;
+        margin-left: -15px;
     //     justify-content: flex-start
     }
     .column{
@@ -30,7 +29,7 @@
         flex-direction: row;
         align-items: center;
         margin-top: -20px;
-        margin-left: 19px;
+        margin-left: 5px;
         word-spacing: 2px;
         a{
             color: $main-color-opacity;
@@ -58,4 +57,31 @@
                 width: 13px;
             }
         }
-    }}
+    }
+}
+
+
+@media (min-width: 1200px){
+    .Footer{
+        width: 1150px
+    }
+}
+    
+@media (min-width: 990px){
+    .Footer{
+         width: 960px
+    }
+}
+
+
+@media (max-width: 990px){
+    .Footer{
+        background: #333333;
+        align-items: center;
+        .column{
+            width: 740px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

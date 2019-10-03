@@ -15,6 +15,13 @@ $color-flags: #7A7A7A;
       rgba(0, 0, 0, 0.5)
     ),
     url(../assets/img/plate-flight-sky-sunset_1500x801.jpeg);
+    height: 100%;
+}
+
+@media (max-width: 990px){
+  .Home{
+    background-size: cover;
+  }
 }
 
 .FlightsResults{

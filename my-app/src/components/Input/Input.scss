@@ -71,7 +71,8 @@
         margin-top: 5px;
     }
 
-    @media (min-width: 990px){
+
+    @media (min-width: 990px) and (max-width: 1200px){
         .small{
             width: 140px;
         }
@@ -79,7 +80,7 @@
             width: 185px;
         }
     }
-
+    
     @media (max-width: 990px){
         .big, .small{
             width: 720px;

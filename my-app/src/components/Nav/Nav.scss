@@ -10,6 +10,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
+        // width: 1150px;
         min-height: 50px;
         border-bottom: 1px solid #ffffffa9;
         .logo-nav{
@@ -122,12 +123,11 @@
     }
 }
 
-@media (min-width: 990px){
+@media (min-width: 990px) and (max-width: 1200px){
     .nav-container{
         width: 960px
     }
 }
-
 @media (max-width: 990px){
     .Nav{
         background: #333333;

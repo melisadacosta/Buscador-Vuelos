@@ -10,21 +10,23 @@ import BookingFlight from 'components/Views/BookingFlight';
 import './styles/_styles.scss';
 import Nav from 'components/Nav/Nav';
 import SearchBarContextProvider from 'components/Contexts/SearchBarContext';
-
+import InputContextProvider from 'components/Contexts/InputContext';
 
 
 const App = () => (
     <>
-        <SearchBarContextProvider>
-            <BrowserRouter>
-                <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/flights' component={FlightsResults} />
-                    <Route path='/bookingflight' component={BookingFlight} />
-                    <Route component={NoMatch} />
-                </Switch>
-            </BrowserRouter>
-        </SearchBarContextProvider>
+        <InputContextProvider>
+            <SearchBarContextProvider>
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route path='/flights' component={FlightsResults} />
+                        <Route path='/bookingflight' component={BookingFlight} />
+                        <Route component={NoMatch} />
+                    </Switch>
+                </BrowserRouter>
+            </SearchBarContextProvider>
+        </InputContextProvider>
     </>
 );
 

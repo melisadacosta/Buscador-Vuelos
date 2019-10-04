@@ -3,18 +3,19 @@ import ServicesOptions from 'components/Services/ServicesOptions/ServicesOptions
 import SearchBar from 'components/SearchBar/SearchBar';
 import '../../styles/_styles.scss';
 import Footer from 'components/Footer/Footer';
-import InputContextProvider from 'components/Contexts/InputContext';
 import Nav from 'components/Nav/Nav';
+import NavResponsive from 'components/Nav/NavResponsive/NavResponsive';
 
 
 const Home = () => (
     <div className='Home'>
-        <Nav />
-        <InputContextProvider>
-            {/* <SearchBarContextProvider> */}
-                <SearchBar />
-            {/* </SearchBarContextProvider> */}
-        </InputContextProvider>
+        <div className='NavHome'>
+            <Nav />
+        </div>
+        <div className='NavResponsiveHome'>
+            <NavResponsive />
+        </div>
+        <SearchBar />
         <ServicesOptions />
         <Footer />
     </div>

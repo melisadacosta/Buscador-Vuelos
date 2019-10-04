@@ -2,6 +2,7 @@
 .SearchBar{
     margin: 70px auto;
     font-family: $main-font;
+    width: 1150px;
     h1{
         font-size: 36px;
         font-weight: 200;
@@ -60,7 +61,7 @@
     }
 }
 
-@media (min-width: 990px){
+@media (min-width: 990px) and (max-width: 1200px){
     .SearchBar{
         width: 960px;
         .input-group{

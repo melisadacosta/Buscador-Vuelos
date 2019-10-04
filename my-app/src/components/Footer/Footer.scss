@@ -67,12 +67,11 @@
     }
 }
     
-@media (min-width: 990px){
+@media (min-width: 990px) and (max-width: 1200px){
     .Footer{
-         width: 960px
-    }
+        width: 960px
+   }
 }
-
 
 @media (max-width: 990px){
     .Footer{

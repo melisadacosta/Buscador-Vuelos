@@ -18,12 +18,11 @@ $color-flags: #7A7A7A;
     height: 100%;
 }
 
-@media (max-width: 990px){
+@media (min-width: 300px) and (max-width: 990px){
   .Home{
     background-size: cover;
   }
 }
-
 .FlightsResults{
     background-image: 
     linear-gradient(
@@ -39,4 +38,19 @@ $color-flags: #7A7A7A;
 }
 .footer-bar{
   background: #333333;
+}
+
+@media (min-width: 0px) and (max-width: 765px){
+    .NavHome{
+      display: none;
+    }
+    .NavResponsiveHome{
+      display: block;
+    }
+}
+
+@media (min-width:765px){
+    .NavResponsiveHome{
+      display: none;
+    }
 }

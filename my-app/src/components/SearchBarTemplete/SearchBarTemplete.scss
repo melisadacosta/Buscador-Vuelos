@@ -1,8 +1,10 @@
 @import 'styles/styles';
-.SearchBar{
-    margin: 70px auto;
+.SearchBarTemplete{
     font-family: $main-font;
     width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
     h1{
         font-size: 36px;
         font-weight: 200;
@@ -23,6 +25,21 @@
         height: 57px;
         width: 995px;
     }
+    .input-group-flight{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .label-input{
+        display: flex;
+        flex-direction: column;
+        label{
+            margin-bottom: 8px;
+            font-family: $secondary-font;
+            font-size: 12px;
+            color: #fff;
+        }
+    }
     .search{
         .button-search{
             border: none !important;
@@ -32,6 +49,17 @@
             width: 75px;
             height: 57px;
             cursor: pointer;
+        }
+        .button-search-flights{
+            border: none !important;
+            outline: none !important;
+            border-radius: 0 3px 3px 0;
+            background-color: $background-color-nav;
+            width: 85px;
+            height: 45px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 600;
         }
         .button-responsive{
             display: none;
@@ -72,16 +100,25 @@
 
 @media (max-width: 990px){
     .SearchBar{
-        width: 720px;
+        width: 100%;
+        p, h1{
+            margin-left: 15px;
+        }
         .input-group{
             flex-direction: column;
             border: none;
             box-shadow: none;
+            width: 100%;
+            align-items: center;
+        }
+        .big, .small {
+            width: 95%;
         }
         .search{
+            width: 97%;
             .button-responsive{
                 display: block;
-                width: 730px;
+                width: 100%;
             }
             .button-search{
                 display: none;

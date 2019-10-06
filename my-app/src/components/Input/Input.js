@@ -24,14 +24,15 @@ class Input extends React.Component {
     render() {
         const { icon, name, type, typeInput, placeholder, onChange, value, className, title, subtitle, label} = this.props
         return (
-                <div className={type}>
+                <>
+
                     <FontAwesomeIcon
                         icon={icon}
                         className='input-icon'
 
                     />
-                    <h1>{title}</h1>
-                    <p>{subtitle}</p>
+                    {/* <h1>{title}</h1>
+                    <p>{subtitle}</p> */}
                     <input
                         label={label}
                         name={name}
@@ -41,7 +42,7 @@ class Input extends React.Component {
                         onChange={onChange} 
                         value={value}
                     />
-                </div>
+                </>
         )
     }
 }

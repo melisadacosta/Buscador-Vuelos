@@ -1,0 +1,27 @@
+.SectionSearchNav{
+    .background-container{
+        position: absolute;
+        height: 43%;
+        width: 100%;
+        overflow: hidden;
+        z-index: 4;
+        .flight-background{
+            background-image: 
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url(../../assets/img/big-ben-bridge-castle-city-460672_1500x800.jpg);
+            height: 280px;
+            background-position: 50%;
+            filter: blur(7px);
+             position: absolute;
+            width: 100%;
+        }
+      }
+      .flight-section-container{
+        position: relative;
+       
+        z-index: 50;
+      }
+}

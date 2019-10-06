@@ -2,6 +2,11 @@
 .RadioContainer{
     display: flex;
     flex-direction: row;
+    width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 6px;
+    margin-bottom: 77px;
 .input-check{
         display: flex;
         font-family: $main-font;
@@ -9,7 +14,7 @@
         color: $main-color;
         position: relative;
         margin-top: 15px;
-        .container{
+        .classNameHome, .classNameFlights{
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -32,8 +37,12 @@
               }
         }
     }
-    .container input:checked ~ .checkmark {
+    .classNameHome input:checked ~ .checkmark {
         background-color: $secondary-color;
+        border: none;
+      }
+      .classNameFlights input:checked ~ .checkmark {
+        background-color: $background-color-nav;
         border: none;
       }
 }

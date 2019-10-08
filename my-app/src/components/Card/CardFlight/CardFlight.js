@@ -12,18 +12,18 @@ class CardFlight extends React.Component {
             <div className='CardFlight'>
                 <div className='origin-flight-container'>
                 <img className="carrierLogo" src={"https://content.airhex.com/content/logos/airlines_"+flightInfo.first.originCarrierCode+"_200_200_s.png"} alt='' />
-                    <OriginFullDate originFulldate={flightInfo.first.originFulldate} />
+                    <OriginFullDate originFulldate={flightInfo.first.originFulldate} airport={flightInfo.first.originIata} />
                     <Itinerary originIata={flightInfo.first.originIata} totalDuration={flightInfo.first.totalDuration}
                         originIntermediateIata={flightInfo.first.originIntermediateIata} destinationIata={flightInfo.first.destinationIata} />
-                    <DestinationFullDate destinationFulldate={flightInfo.first.destinationFulldate} />
+                    <DestinationFullDate destinationFulldate={flightInfo.first.destinationFulldate} airport={flightInfo.first.destinationIata} />
                     <PriceFlight price={flightInfo.price} classFlight={flightInfo.classFlight} />
                 </div>
                 <div className='return-flight-container'>
                     <img className="carrierLogo" src={"https://content.airhex.com/content/logos/airlines_"+flightInfo.second.originCarrierCode+"_200_200_s.png"} alt='' />
-                    <OriginFullDate originFulldate={flightInfo.second.originFulldate} />
+                    <OriginFullDate originFulldate={flightInfo.second.originFulldate} airport={flightInfo.second.originIata} />
                     <Itinerary originIata={flightInfo.second.originIata} totalDuration={flightInfo.second.totalDuration}
                         originIntermediateIata={flightInfo.second.originIntermediateIata} destinationIata={flightInfo.second.destinationIata} />
-                    <DestinationFullDate destinationFulldate={flightInfo.second.destinationFulldate} />
+                    <DestinationFullDate destinationFulldate={flightInfo.second.destinationFulldate} airport={flightInfo.second.destinationIata} />
                 </div>
             </div>
         )

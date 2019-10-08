@@ -35,7 +35,7 @@ class SearchBarContextProvider extends React.Component {
 
                 const accessToken = data.access_token;
 
-                fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${textIataOrigin}&destinationLocationCode=${textIataDest}&departureDate=${textFromDate}&returnDate=${textToData}&adults=${textAdults}&max=20`, {
+                fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${textIataOrigin}&destinationLocationCode=${textIataDest}&departureDate=${textFromDate}&returnDate=${textToData}&adults=${textAdults}&max=50`, {
                     headers: {
                         'Authorization': `Bearer ${accessToken}`
                     }
@@ -44,16 +44,9 @@ class SearchBarContextProvider extends React.Component {
                     .then(data => {
                         this.updateFlightsInfo(data.data)
                         console.log(data.data)
-
                     })
             })
     }
-    //  getCityNameOrigin = () =>{
-    //     fetch(`https://airports-dpvsjndcod.now.sh/city/${textIataOrigin}`)
-    //     .then(response => response.json())
-    //     .then (data => console.log(data.data)
-    //     )
-    // }
     updateFlightsInfo = data => {
         const flightInfo = data.map(flight => {
             return {
@@ -101,7 +94,6 @@ class SearchBarContextProvider extends React.Component {
                     flight: this.state.flights,
                     loadFlights: this.loadFlights,
                     updateFlightsInfo: this.updateFlightsInfo,
-                    getCityNameOrigin: this.getCityNameOrigin
                 }}>
                 {this.props.children}
             </SearchBarContext.Provider>

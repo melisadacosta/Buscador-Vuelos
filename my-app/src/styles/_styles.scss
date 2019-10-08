@@ -6,7 +6,14 @@ $background-color-nav: #0093d2;
 $main-color-opacity: #ffffffa9;
 $color-flags: #7A7A7A;
 
-
+.Home{
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('../assets/img/plate-flight-sky-sunset_1500x801.jpeg');    
+}
 @media (min-width: 300px) and (max-width: 990px){
   .Home{
     background-size: cover;

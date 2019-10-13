@@ -16,18 +16,18 @@
     input::placeholder{
         font-family: 'Helvetica', sans-serif;
    }
-    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    ::-webkit-input-placeholder { 
         color: $main-color;
     }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    :-moz-placeholder { 
        color: $main-color;
-       opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
+       opacity: 1;
     }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    ::-moz-placeholder { 
        color: $main-color;
        opacity:  1;
     }
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    :-ms-input-placeholder { 
        color: $main-color;
     }
     .small{
@@ -85,7 +85,7 @@
     
     @media (max-width: 990px){
         .big, .small{
-            width: 720px;
+            max-width: 720px;
             border: 1px solid #ffffff;
             border-radius: 3px;
             margin-bottom: 20px;

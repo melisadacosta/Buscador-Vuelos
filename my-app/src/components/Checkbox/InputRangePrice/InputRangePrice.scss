@@ -1,98 +1,60 @@
 @import 'styles/styles';
-.form {
-  padding: 30px 0px 0px;
-  }
+
   .input-range {
-    margin-bottom: 50px;
-    height: 1rem;
-    position: relative;
-    width: 212px;
-}
-.input-range__label--min {
-  left: 0;
-}
-.input-range__label--min, .input-range__label--max {
-  bottom: -1.4rem;
-  position: absolute;
+    height: 60px;
+    margin-left: 15px;
+    width: 200px;
 }
 .input-range__label {
-  color: #aaaaaa;
+  color: #595959;
   font-family: $secondary-font;
-  font-size: 0.8rem;
+  font-size: 13px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   white-space: nowrap;
 }
 .input-range__track--background {
-  left: 0;
-  margin-top: -0.15rem;
+  margin-top: 10px;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 50%;
 }
 .input-range__track {
-  background: #eeeeee;
   border-radius: 0.3rem;
   cursor: pointer;
   display: block;
   height: 0.3rem;
   position: relative;
+  top: 10px;
   -webkit-transition: left 0.3s ease-out, width 0.3s ease-out;
   transition: left 0.3s ease-out, width 0.3s ease-out;
 }
-.input-range__label--max {
-  right: 0;
-}
+
 .input-range__label--min, .input-range__label--max {
-  bottom: -1.4rem;
-  position: absolute;
-}
-.input-range__label--value {
-  position: absolute;
-  top: -1.8rem;
-}
-.input-range__label {
-  color: #aaaaaa;
-  font-family: "Helvetica Neue", san-serif;
-  font-size: 0.8rem;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  white-space: nowrap;
+  display: none;
 }
 .input-range__track--active {
   background: $background-color-nav;
 }
 .input-range__slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: $background-color-nav;
+  background: #fff;
   border-radius: 100%;
   cursor: pointer;
-  display: block;
-  height: 1rem;
-  margin-left: -0.5rem;
-  margin-top: -0.65rem;
-  outline: none;
-  position: absolute;
-  top: 50%;
-  // -webkit-transition: box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  // transition: box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  // transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  width: 1rem;
-}
-.input-range__label-container {
-  left: -14%;
-  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: -7px;
+  margin-top: -2px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 .input-range__label--value {
   position: absolute;
-  top: -1.8rem;
+    top: -1.8rem;
+    left: -0.5rem;
 }
-h3{
+.form h3{
   text-transform: uppercase;
   font-size: 13px;
   color: #555555;
   font-family: $main-font;
+  margin-bottom: 25px;
 }

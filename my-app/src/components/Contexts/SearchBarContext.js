@@ -48,6 +48,14 @@ class SearchBarContextProvider extends React.Component {
             })
     }
     updateFlightsInfo = data => {
+        var iso8601DurationRegex = /(-)?P(?:([\.,\d]+)Y)?(?:([\.,\d]+)M)?(?:([\.,\d]+)W)?(?:([\.,\d]+)D)?T(?:([\.,\d]+)H)?(?:([\.,\d]+)M)?(?:([\.,\d]+)S)?/;
+        let parseISO8601Duration = function (iso8601Duration) {
+            var matches = iso8601Duration.match(iso8601DurationRegex);
+            return {
+                sign: matches[1] === undefined ? '+' : '-', years: matches[2] === undefined ? 0 : matches[2], months: matches[3] === undefined ? 0 : matches[3], weeks: matches[4] === undefined ? 0 : matches[4], days: matches[5] === undefined ? 0 : matches[5], hours: matches[6] === undefined ? 0 : matches[6], minutes: matches[7] === undefined ? 0 : matches[7], seconds: matches[8] === undefined ? 0 : matches[8]
+            };
+        };
+
         const flightInfo = data.map(flight => {
             return {
                 id: flight.id,
@@ -57,19 +65,19 @@ class SearchBarContextProvider extends React.Component {
                 first: {
                     originFulldate: flight.itineraries[0].segments[0].departure.at,
                     destinationFulldate: flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].arrival.at,
-                    totalDuration: flight.itineraries[0].duration,
+                    totalDuration: parseISO8601Duration(flight.itineraries[0].duration).hours + "h " + parseISO8601Duration(flight.itineraries[0].duration).minutes + "m",
                     originIata: flight.itineraries[0].segments[0].departure.iataCode,
                     destinationIata: flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].arrival.iataCode,
                     originCount: flight.itineraries[0].segments.length,
                     originIntermediateIata: flight.itineraries[0].segments[0].arrival.iataCode,
                     originCarrierCode: flight.itineraries[0].segments[0].carrierCode,
                     // destinationCarrierCode: flight.itineraries[0].segments[flight.itineraries[0].segments.length - 1].carrierCode,
-                    
+
                 },
                 second: {
                     originFulldate: flight.itineraries[1].segments[0].departure.at,
                     destinationFulldate: flight.itineraries[1].segments[flight.itineraries[1].segments.length - 1].arrival.at,
-                    totalDuration: flight.itineraries[1].duration,
+                    totalDuration: parseISO8601Duration(flight.itineraries[1].duration).hours + "h " + parseISO8601Duration(flight.itineraries[1].duration).minutes + "m",
                     originIata: flight.itineraries[1].segments[0].departure.iataCode,
                     destinationIata: flight.itineraries[1].segments[flight.itineraries[1].segments.length - 1].arrival.iataCode,
                     originCount: flight.itineraries[1].segments.length,
@@ -78,12 +86,12 @@ class SearchBarContextProvider extends React.Component {
                     // destinationCarrierCode: flight.itineraries[1].segments[flight.itineraries[0].segments.length - 1].carrierCode
                 }
             }
-            
+
         }
         )
         this.setState({ flights: flightInfo })
         console.log(flightInfo);
-        
+
     }
 
 

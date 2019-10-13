@@ -31,17 +31,17 @@ class Checkbox extends React.Component {
                     />
 
                     <span className="React__checkbox--span">
-                            <div className='items-column'>
-                                <div className='items'>
-                                    <h4>{text}</h4>
-                                    <p>{price}</p>
-                                </div>
-                                
+                        <div className='items-column'>
+                            <div className='items'>
+                                <h4>{text}</h4>
+                                <p>{price}</p>
                             </div>
+
+                        </div>
                     </span>
                     <div className='item-span'>
-                                    <p>{detail}</p>
-                                </div>
+                        <p>{detail}</p>
+                    </div>
                 </label>
             </div>
         );

@@ -84,13 +84,13 @@
 }
 
 @media (min-width: 1200px){
-    .SearchBar{
+    .SearchBarTemplete{
         width: 1150px;
     }
 }
 
 @media (min-width: 990px) and (max-width: 1200px){
-    .SearchBar{
+    .SearchBarTemplete{
         width: 960px;
         .input-group{
             width: 845px;
@@ -99,10 +99,11 @@
 }
 
 @media (max-width: 990px){
-    .SearchBar{
+    .SearchBarTemplete{
         width: 100%;
         p, h1{
-            margin-left: 15px;
+            width: 95%;
+            margin-left: auto;
         }
         .input-group{
             flex-direction: column;
@@ -110,15 +111,21 @@
             box-shadow: none;
             width: 100%;
             align-items: center;
+            div{
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
-        .big, .small {
-            width: 95%;
-        }
+        // .big, .small {
+        //     width: 95%;
+        // }
         .search{
-            width: 97%;
+            // width: 97%;
             .button-responsive{
                 display: block;
-                width: 100%;
+                width: 96%;
+                margin: auto;
             }
             .button-search{
                 display: none;

@@ -17,6 +17,13 @@
                 height: 50px;
         }
     }
+    .AirlineCode{
+        font-size: 10px;
+        font-family: $secondary-font;
+        color: #333333;
+        opacity: 0.5;
+        margin-bottom: 10px;
+    }
     .return-flight-container{
         width: 495px;
     }
@@ -26,71 +33,15 @@
         align-items: center;
         position: relative;
     }
-
-    // .scale-flight, .scale-flight-return{
-    //     .origin-flight, .destination-flight{
-    //         display: flex;
-    //         flex-direction: column;
-    //         align-items: center;
-    //     .origin{
-    //         p{
-    //             font-family: $secondary-font;
-    //             font-size: 9px;
-    //             color: #333333;
-    //             font-weight: 300;
-    //         }
-    //     }
-    //     .circle{
-    //         width: 8px;
-    //         height: 8px;
-    //         border-radius: 50%;
-    //         background-color: $background-color-nav;
-    //         margin-bottom: 8px;
-    //     }
-    //     .icon-plane-origin{
-    //         transform: rotate(-45deg);
-    //         color: #B3B3B3;
-    //         margin-bottom: 10px;
-    //         svg{
-
-    //             width: 15px;
-    //         }
-    //     }
-    //     .icon-plane-destination{
-    //         transform: rotate(45deg);
-    //         color: #B3B3B3;
-    //         margin-bottom: 10px;
-    //         svg{
-
-    //             width: 15px;
-    //         }
-    //     }
-    // }
-    // .flight-path-line{
-    //     width: 170px;
-    //     height: 2px;
-    //     background: #B3B3B3;
-    // }
-    // .scale-flight-return{
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-evenly;
-    // }
-    // .intermediate-flight{
-    //     position: absolute;
-    //     left: 75px;
-    //     top: 0px;
-    //     font-size: 10px;
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     .circle{
-    //         width: 8px;
-    //         height: 8px;
-    //         border-radius: 50%;
-    //         background-color: #B3B3B3;
-    //         margin-bottom: 8px;
-    //     }
-    // }
-// }
+.space-white{
+    width: 100px;
+}
+.return-cardflight, .origin-cardflight{
+    display: flex;
+    flex-direction: column;
+}
+.origin-cardflight{
+    border-bottom: 1px dashed #e6e6e6;;
+    margin-bottom: 15px;
+}
 }

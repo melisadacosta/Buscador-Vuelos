@@ -4,7 +4,7 @@ import publicidad2 from 'assets/img/publicidad2.jpg'
 import './AdvertisementAside.scss'
 
 const AdvertisementAside = () => (
-    <div className='AdvertisementAside'>
+    <div className='AdvertisementAside '>
         <div className='advertisement'>
             <p>Advertisement</p>
             <img src={publicidad1} alt='' />
@@ -13,7 +13,6 @@ const AdvertisementAside = () => (
             <p>Advertisement</p>
             <img src={publicidad2} alt='' />
         </div>
-        
     </div>
 )
 

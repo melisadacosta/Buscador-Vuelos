@@ -7,8 +7,9 @@ class Itinerary extends React.Component {
     render() {
         const originIata = this.props.originIata;
         const totalDuration = this.props.totalDuration;
-        const originIntermediateIata = this.props.originIntermediateIata;
         const destinationIata = this.props.destinationIata;
+        const intermediateIata = this.props.intermediateIata === this.props.destinationIata ||
+            this.props.intermediateIata == this.props.originIata ? "" : this.props.intermediateIata;
         return (
             <div className='Itinerary'>
                 <div className='origin-flight'>
@@ -24,9 +25,9 @@ class Itinerary extends React.Component {
                     <div className='intermediate'>
                         <p>{totalDuration}</p>
                     </div>
-                    <div className='circle' />
+                    <div className={intermediateIata == "" ? 'circle hide' : 'circle show'} />
                     <div className='origin'>
-                        <p>{originIntermediateIata}</p>
+                        <p>{intermediateIata}</p>
                     </div>
                 </div>
                 <div className='flight-path-line' />

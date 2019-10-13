@@ -11,10 +11,10 @@ import InputRadio from 'components/SearchBarTemplete/InputRadio/InputRadio';
 
 const Home = () => (
     <div className='Home'>
-        <div className='NavHome'>
+        <div className='Nav'>
             <Nav />
         </div>
-        <div className='NavResponsiveHome'>
+        <div className='NavResponsive'>
             <NavResponsive />
         </div>
         <SearchBarTemplete

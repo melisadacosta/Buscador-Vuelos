@@ -3,6 +3,7 @@ import Checkbox from 'components/Checkbox/Checkbox'
 import InputRangePrice from 'components/Checkbox/InputRangePrice/InputRangePrice'
 import './CheckboxGroups.scss'
 
+
 const CheckboxGroups = () => (
 
     <div className='CheckboxGroup'>
@@ -21,8 +22,8 @@ const CheckboxGroups = () => (
         </div>
         <div className='takeoff-london'>
             <Checkbox title='Take-off London' text='Morning' price='$207' detail='05:00am - 11:59am' />
-            <Checkbox text='Afternoon' price='$168' detail='12:00pm - 05:59pm'  />
-            <Checkbox text='Evening' price='$439' detail='06:00pm - 11:59pm'  />
+            <Checkbox text='Afternoon' price='$168' detail='12:00pm - 05:59pm' />
+            <Checkbox text='Evening' price='$439' detail='06:00pm - 11:59pm' />
         </div>
         <div className='landing-newyork'>
             <Checkbox title='Landing New York' text='Morning' price='$454' detail='05:00am - 11:59am' />
@@ -63,8 +64,6 @@ const CheckboxGroups = () => (
             <Checkbox text='Fly Emirates' price='$483' />
         </div>
     </div>
-    // title='Flight Class'>
-
 )
 
 export default CheckboxGroups

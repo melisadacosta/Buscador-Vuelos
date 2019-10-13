@@ -4,11 +4,19 @@
     flex-direction: row;
     align-items: center;
     position: relative;
-
+.origin-flight{
+    right: -6px;
+    top: -1px;
+    z-index: 5;
+}
+.destination-flight{
+    left:-7px;
+}
 .origin-flight, .destination-flight{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 .origin{
     p{
         font-family: $secondary-font;
@@ -47,16 +55,19 @@
 width: 170px;
 height: 2px;
 background: #B3B3B3;
+position: relative;
+top: -3px;
 }
 .scale-flight-return{
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
+
 }
 .intermediate-flight{
 position: absolute;
-left: 75px;
-top: 0px;
+left: 80px;
+top: -3px;
 font-size: 10px;
 display: flex;
 flex-direction: column;
@@ -67,6 +78,9 @@ align-items: center;
     border-radius: 50%;
     background-color: #B3B3B3;
     margin-bottom: 8px;
+}
+.hide{
+    visibility: hidden;
 }
 }
 }

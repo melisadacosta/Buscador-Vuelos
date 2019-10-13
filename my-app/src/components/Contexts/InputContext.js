@@ -7,7 +7,7 @@ class InputContextProvider extends React.Component {
     textIataOrigin: '',
     textIataDest: '',
     textFromDate: '',
-    textToData: '', 
+    textToData: '',
     textAdults: ''
   }
   updatetextIataOrigin = event => {

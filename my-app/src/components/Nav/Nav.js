@@ -10,20 +10,8 @@ import US from 'assets/img/US.png'
 import NavCurrenciesContainer from 'components/Nav/NavCurrenciesContainer/NavCurrenciesContainer';
 import NavCurrenciesPopularContainer from 'components/Nav/NavCurrenciesContainer/NavCurrenciesPopularContainer/NavCurrenciesPopularContainer';
 
-//High Order Component - HOC
-//pedazo de logica que se puede apendear a un componente 
-// <button onClick ={this.redirect}>Nombredelboton</button> // nos lleva un boton a una vista
-//tengo que poner el boton en el return
-
-
 const Nav = () => (
-    // redirect = () =>{
-    //     this.props.history.push('/contact')
-    // }
-    // render() {
-    //     return (
     <div className="Nav">
-        {/* <button onClick ={this.redirect}>Nombredelboton</button> */}
         <div className="nav-container">
             <ul className="nav-bar left">
                 <div className="logo-nav"><img src={adantrip} alt='' /></div>
@@ -64,19 +52,19 @@ const Nav = () => (
                         link='/'
                         activeClassName='active'
                         title='USD' />
-                        <ul className='sub-menu-flags'>
+                    <ul className='sub-menu-flags'>
                         <NavCurrenciesPopularContainer />
                         <NavCurrenciesContainer />
-                        </ul>
+                    </ul>
                 </li>
                 <li className="menu-item">
                     <LinkFooterNav
                         link='/'
                         activeClassName='active'
-                         />
-                         <div className='flag-nav'>
+                    />
+                    <div className='flag-nav'>
                         <img src={US} alt='' />
-                         </div>
+                    </div>
                     <ul className='sub-menu-flags'>
                         <NavLanguageContainer />
                     </ul>
@@ -136,5 +124,3 @@ const Nav = () => (
 
 export default withRouter(Nav);
 
-//input de tipo day en html5
-//imput tipe number

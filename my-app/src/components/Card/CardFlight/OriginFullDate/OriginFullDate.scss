@@ -2,11 +2,13 @@
 .time-date-container{
     display: flex;
     flex-direction: column;
+    width: 80px;
     .time-container{
         display: flex;
         flex-direction: row;
         align-items: baseline;
         margin-bottom: 5px;
+        
         p{
             font-family: $secondary-font;
             font-size: 17px;
@@ -31,6 +33,7 @@
             color: #333333;
             margin: 0px;
             opacity: 0.5;
+
         }
     }
     .airport{

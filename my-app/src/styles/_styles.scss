@@ -28,16 +28,16 @@ $color-flags: #7A7A7A;
 }
 
 @media (min-width: 0px) and (max-width: 765px){
-    .NavHome{
+    .Nav{
       display: none;
     }
-    .NavResponsiveHome{
+    .NavResponsive{
       display: block;
     }
 }
 
 @media (min-width:765px){
-    .NavResponsiveHome{
+    .NavResponsive{
       display: none;
     }
 }

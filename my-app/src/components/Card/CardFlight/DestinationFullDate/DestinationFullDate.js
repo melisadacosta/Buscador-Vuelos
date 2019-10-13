@@ -13,10 +13,10 @@ class DestinationFullDate extends React.Component {
         const timeDestinationAmPm = moment(this.props.destinationFulldate).format('A');
         const dateDestination = moment(this.props.destinationFulldate).format('ll');
 
-        if(this.state.airportState === ""){
+        if (this.state.airportState === "") {
             fetch(`https://airports-dpvsjndcod.now.sh/city/${this.props.airport}`)
-                    .then(response => response.json())
-                    .then(res => this.setState({ airportState: res.state }))
+                .then(response => response.json())
+                .then(res => this.setState({ airportState: res.state }))
         }
         return (
             <div className='DestinationFullDate'>

@@ -25,3 +25,18 @@
         z-index: 50;
       }
 }
+
+@media (min-width: 0px) and (max-width: 765px){
+  .Nav{
+    display: none;
+  }
+  .NavResponsive{
+    display: block;
+  }
+}
+
+@media (min-width:765px){
+  .NavResponsive{
+    display: none;
+  }
+}

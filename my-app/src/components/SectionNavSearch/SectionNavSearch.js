@@ -4,7 +4,7 @@ import SearchBarTemplete from 'components/SearchBarTemplete/SearchBarTemplete'
 import InputRadio from 'components/SearchBarTemplete/InputRadio/InputRadio'
 import { INPUT_SIZES } from 'components/Input/Input';
 import Nav from 'components/Nav/Nav'
-
+import NavResponsive from 'components/Nav/NavResponsive/NavResponsive'
 
 
 class SectionNavSearch extends React.Component {
@@ -15,7 +15,12 @@ class SectionNavSearch extends React.Component {
                     <div className='flight-background'></div>
                 </div>
                 <div className='flight-section-container'>
-                    <Nav />
+                    <div className='Nav'>
+                        <Nav />
+                    </div>
+                    <div className='NavResponsive'>
+                        <NavResponsive />
+                    </div>
                     <SearchBarTemplete
                         classNameInputGroup={'input-group-flight'}
                         labelinput={'label-input'}
@@ -34,11 +39,7 @@ class SectionNavSearch extends React.Component {
                         classNameButtonRes={'button-responsive'}
                         text1={'Search'} />
                     <InputRadio className={'classNameFlights'} />
-
-                    
-                
-
-            </div>
+                </div>
             </div>
         )
     }

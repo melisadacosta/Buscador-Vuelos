@@ -1,0 +1,66 @@
+@import 'styles/styles';
+
+  .input-range {
+    height: 60px;
+    margin-left: 15px;
+    width: 200px;
+}
+.input-range__label {
+  color: #595959;
+  font-family: $secondary-font;
+  font-size: 13px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  white-space: nowrap;
+}
+.input-range__track--background {
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+.input-range__track {
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: block;
+  height: 0.3rem;
+  position: relative;
+  top: 10px;
+  -webkit-transition: left 0.3s ease-out, width 0.3s ease-out;
+  transition: left 0.3s ease-out, width 0.3s ease-out;
+}
+
+.input-range__label--min, .input-range__label--max {
+  display: none;
+}
+.input-range__track--active {
+  background: $background-color-nav;
+}
+.input-range__slider {
+  background: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: -7px;
+  margin-top: -2px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.input-range__label--value {
+  position: absolute;
+    top: -1.8rem;
+    left: -0.5rem;
+}
+.form h3{
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #555555;
+  font-family: $main-font;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+  .input-range{
+    width: 155px;
+  }
+}

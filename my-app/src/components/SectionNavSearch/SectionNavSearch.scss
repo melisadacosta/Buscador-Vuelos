@@ -1,0 +1,102 @@
+.SectionSearchNav{
+    .background-container{
+        position: absolute;
+        height: 43%;
+        width: 100%;
+        overflow: hidden;
+        z-index: 4;
+        .flight-background{
+            background-image: 
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url(../../assets/img/big-ben-bridge-castle-city-460672_1500x800.jpg);
+            height: 280px;
+            background-position: 50%;
+            filter: blur(7px);
+             position: absolute;
+            width: 100%;
+        }
+      }
+      .flight-section-container{
+        position: relative;
+       
+        z-index: 50;
+      }
+}
+
+// @media (min-width: 0px) and (max-width: 765px){
+//   .Nav{
+//     display: none;
+//   }
+//   .NavResponsive{
+//     display: block;
+//   }
+// }
+
+// @media (min-width:765px){
+//   .NavResponsive{
+//     display: none;
+//   }
+// }
+
+@media (min-width: 1200px){
+  .SearchBarTemplete{
+      width: 1150px;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+  .SearchBarTemplete{
+      width: 960px;
+      .input-group{
+          width: 845px;
+      }
+  }
+}
+
+@media (max-width: 990px){
+  .SearchBarTemplete{
+      width: 100%;
+      p, h1{
+          width: 95%;
+          margin-left: auto;
+      }
+      .input-group{
+          flex-direction: column;
+          border: none;
+          box-shadow: none;
+          width: 100%;
+          align-items: center;
+          div{
+              width: 95%;
+              margin-left: auto;
+              margin-right: auto;
+          }
+      }
+      .search{
+          .button-responsive{
+              display: block;
+              width: 96%;
+              margin: auto;
+          }
+          .button-search{
+              display: none;
+          }
+  }
+}
+}
+
+@media (max-width: 990px){
+  .SectionSearchNav{
+  .flight-section-container{
+    .SearchBarTemplete{
+      display: none;
+    }
+    .RadioContainer{
+      display: none;
+    }
+  }
+}
+}

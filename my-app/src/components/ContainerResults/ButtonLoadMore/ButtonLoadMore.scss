@@ -1,0 +1,43 @@
+@import '../../../styles/styles';
+
+.ButtonLoadMore{
+    margin-bottom: 15px;
+    .search-more{
+        button{
+            width: 660px;
+            height: 50px;
+            background: #595959;
+            color: #333333;
+            border-radius: 1px;
+            border: 1px solid #404040;
+            font-family: $main-font;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            &:hover{
+                background: #404040;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .ButtonLoadMore{
+        .search-more{
+            button{
+                width: 560px;
+            }
+        }
+    }
+}
+
+@media (max-width: 990px){
+    .ButtonLoadMore{
+        .search-more{
+            button{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+$main-font: 'Roboto', sans-serif;
+$secondary-font: 'Helvetica', sans-serif;
+$main-color: #FFFFFF;
+$secondary-color: #ff6c2d;
+$background-color-nav: #0093d2;
+$main-color-opacity: #ffffffa9;
+$color-flags: #7A7A7A;
+
+.Home{
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('../assets/img/plate-flight-sky-sunset_1500x801.jpeg');    
+}
+@media (min-width: 300px) and (max-width: 990px){
+  .Home{
+    background-size: cover;
+  }
+}
+
+.footer-flightsresults{
+  background: #FFFFFF;
+}
+.footer-bar{
+  background: #333333;
+}
+
+@media (min-width: 0px) and (max-width: 765px){
+    .Nav{
+      display: none;
+    }
+    .NavResponsive{
+      display: block;
+    }
+}
+
+@media (min-width:765px){
+    .NavResponsive{
+      display: none;
+    }
+}
+
+@media (max-width: 990px){
+  .footer-flightsresults{
+    position: relative;
+    top: 250px;
+  }
+}

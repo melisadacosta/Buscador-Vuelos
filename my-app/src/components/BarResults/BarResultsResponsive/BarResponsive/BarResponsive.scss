@@ -1,0 +1,44 @@
+@import 'styles/styles';
+.BarResponsive{
+    width: 658px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #b3b3b3;
+    border-radius: 2px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    outline: none !important;
+    margin-bottom: 15px;
+    .more-results{
+        ul{
+            list-style:none ;
+        }
+    }
+    .more-item-a{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color: #333333;
+        svg{
+            margin-left: 15px;
+        }
+    }
+    .more-item{
+        border:none;
+    }
+    .active {
+        a{
+        color:$background-color-nav
+        }
+        span{
+            color: #4C4C4C;
+        }
+    }
+}
+
+@media (max-width: 990px){
+    .BarResponsive{
+        width: 100%;
+    }
+}

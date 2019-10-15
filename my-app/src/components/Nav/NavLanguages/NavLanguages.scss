@@ -1,0 +1,28 @@
+@import 'styles/styles';
+.NavLanguages{
+    background-color: $main-color;
+    display: flex;
+    flex-direction: row;
+    .flags-list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 185px;
+        height: 32px;
+        cursor: pointer;
+        &:hover{
+            background-color: #e6e6e6;
+        }
+            img{
+                width: 17px;
+                height: 17px;
+                padding-left: 5px;
+            }
+            p{
+                font-family: 'Helvetica', sans-serif;
+                font-size: 13px;
+                color: $color-flags;
+                padding-left: 10px;
+            }
+        }
+    }

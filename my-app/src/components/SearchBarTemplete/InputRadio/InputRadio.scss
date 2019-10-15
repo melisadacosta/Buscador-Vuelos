@@ -1,0 +1,67 @@
+@import 'styles/styles';
+.RadioContainer{
+    display: flex;
+    flex-direction: row;
+    width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 6px;
+    margin-bottom: 77px;
+.input-check{
+        display: flex;
+        font-family: $main-font;
+        font-size: 14px;
+        color: $main-color;
+        position: relative;
+        margin-top: 15px;
+        .classNameHome, .classNameFlights{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding-right: 15px;
+             input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+              }
+            .checkmark {
+                height: 7px;
+                width: 7px;
+                border: 1px solid $main-color;
+                border-radius: 50%;
+                margin-right: 5px;
+              }
+        }
+    }
+    .classNameHome input:checked ~ .checkmark {
+        background-color: $secondary-color;
+        border: none;
+      }
+      .classNameFlights input:checked ~ .checkmark {
+        background-color: $background-color-nav;
+        border: none;
+      }
+}
+@media (max-width: 990px){
+  .RadioContainer{
+    justify-content: center;
+    width: 80%;
+    .input-check{
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 404px;
+    }
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+  .RadioContainer{
+      width: 960px;
+  }
+}
+

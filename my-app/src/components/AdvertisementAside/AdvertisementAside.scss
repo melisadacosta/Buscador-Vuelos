@@ -1,0 +1,44 @@
+.AdvertisementAside{
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    position: sticky;
+    top: 0;
+        .advertisement{
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            position: relative;
+            background: #fff;
+            margin-bottom: 15px;
+            p{
+                font-size: 9px;
+                color: #a6a6a6;
+                position: absolute;
+                top: -5px;
+                left: 13px;
+            }
+            img{
+                margin-top: 15px;
+                width: 205px;
+            }
+            
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .AdvertisementAside{
+        width: 170px;
+        .advertisement{
+            img{
+                width: 160px;
+            }
+    }
+}
+}
+
+@media (max-width: 990px){
+    .AdvertisementAside{
+        display: none;
+    }
+}

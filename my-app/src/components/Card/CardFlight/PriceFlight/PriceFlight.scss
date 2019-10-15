@@ -1,0 +1,45 @@
+@import 'styles/styles';
+.PriceFlight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .price{
+        p{
+            font-family: $main-font;
+            font-size: 22px;
+            color: #333333;
+            margin: 0px;
+        }
+    }
+    .class-flight{
+        margin-bottom: 5px;
+        p{
+            font-family: $secondary-font;
+            font-size: 10px;
+            text-transform: lowercase;
+            color: #B3B3B3;
+            margin: 0px;
+        }
+    }
+    .button-booknow{
+        background: $secondary-color;
+        color: #fff;
+        width: 85px;
+        height: 30px;
+        font-family: $main-font;
+        font-size: 11px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 990px){
+    .PriceFlight{
+        position: relative;
+        top: 330px;
+        .button-booknow{
+            width: 600px;
+        }
+    }
+}

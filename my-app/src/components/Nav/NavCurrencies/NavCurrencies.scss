@@ -1,0 +1,41 @@
+@import 'styles/styles';
+.NavCurrencies{
+    width: 185px;   
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+        ul{
+            list-style: none;
+            padding: 0px;
+            li{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 185px;   
+                height: 28px;
+                padding: 0px 5px;
+                span{
+                    display: inline-block;
+                    font-weight: bold;
+                    width: 30px;
+                    margin-right: 5px;
+                    font-size: 13px;
+                    color: #0093d2;
+                }
+                p{
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 12px;
+                    color: #7A7A7A;
+                }
+                &:hover{
+                    background-color: #0093d2;
+                    color: $main-color;
+                    cursor: pointer;
+                    span, p{
+                    color: $main-color
+                            }
+                        }
+                }
+            }
+        }

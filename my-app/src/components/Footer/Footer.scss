@@ -1,0 +1,84 @@
+@import 'styles/styles';
+
+.Footer{
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    justify-content: space-between;
+    margin-top: 50px;
+    .FooterLinks{
+        display: flex;
+        margin-left: -15px;
+    }
+    .column{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .social{
+        display: flex;
+        flex-direction: row;
+    }
+    .Copyright{
+        font-family: 'Helvetica', sans-serif;
+        font-size: 12px;
+        color: $main-color-opacity;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: -20px;
+        margin-left: 5px;
+        word-spacing: 2px;
+        a{
+            color: $main-color-opacity;
+        }
+    }
+    .iconsList{
+        display: flex;
+        justify-content: center;
+        padding-left: 15px;
+        li{
+            list-style: none;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.322);
+            cursor: pointer;
+            &:hover{
+                background-color: #0093d2;
+            }
+            svg{
+                color: white;
+                width: 13px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1200px){
+    .Footer{
+        width: 1150px
+    }
+}
+    
+@media (min-width: 990px) and (max-width: 1200px){
+    .Footer{
+        width: 960px
+   }
+}
+
+@media (max-width: 990px){
+    .Footer{
+        background: #333333;
+        align-items: center;
+        .column{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

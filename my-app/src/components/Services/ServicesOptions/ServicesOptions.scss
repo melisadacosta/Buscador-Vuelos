@@ -1,0 +1,27 @@
+.ServicesOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px auto;
+}
+
+@media (min-width: 1200px){
+    .ServicesOptions{
+        width: 1180px;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .ServicesOptions{
+        width: 990px
+    }
+}
+
+@media (max-width: 990px){
+    .ServicesOptions{
+        width: 90%;
+        margin-left: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,38 @@
+.AdvertisementLeft{
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    position: sticky;
+    top: 200px;
+    .advertisement{
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        position: relative;
+        background: #fff;
+        margin-bottom: 15px;
+        height: 350px;
+        p{
+            font-size: 9px;
+            color: #a6a6a6;
+            position: absolute;
+            top: -5px;
+            left: 13px;
+        }
+        img{
+            margin-top: 15px;
+            width: 205px;
+        }
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .AdvertisementLeft{
+        width: 180px;
+        .advertisement{
+            img{
+                width: 165px;
+            }
+    }
+}
+}

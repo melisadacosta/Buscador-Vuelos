@@ -1,0 +1,58 @@
+@import 'styles/styles';
+.BarResultsResponsive{
+    position: relative;
+     .list-hidden{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        background: white;
+        width: 660px;
+        position: relative;
+        top: -16px;
+        padding: 0px;
+        box-shadow: 0 1px 20px rgba(0,0,0,0.15);
+        li{
+            border: none;
+        }
+        .more-list-item{
+            font-family: $secondary-font;
+            font-size: 15px;
+            color: #333333;
+            width: 620px;
+            padding: 10px 0px 10px 40px;
+            &:hover{
+                background-color: $background-color-nav;
+                color: #fff;
+            }
+        }
+    }
+    .more-item{
+        border: none;
+        a{
+            display: flex;
+            flex-direction: row;
+        }
+        svg{
+            padding-left: 25px;
+        }
+    }
+    .active {
+        a{
+        color:$background-color-nav
+        }
+        span{
+            color: #4C4C4C;
+        }
+    }
+}
+
+@media (max-width: 990px){
+    .BarResultsResponsive{
+    .list-hidden{
+        width: 100%;
+        .more-list-item{
+            width: 96%;
+        }
+    }
+}
+}

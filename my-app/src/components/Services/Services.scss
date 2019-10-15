@@ -1,0 +1,36 @@
+@import 'styles/styles';
+.services-container{
+    font-family: $main-font;
+    width: 245px;
+    margin-left: -100px;
+    .title{
+        font-size: 18px;
+        color: $main-color;
+        text-transform: capitalize;
+    }
+    .text{
+        font-size: 14px;
+        color: $main-color-opacity;
+        width: 213px;
+    }
+    .services-icon{
+        width: 30px;
+        height: 30px;
+        color: $main-color;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .services-container{
+        width: 225px;
+        margin-left: -5px;
+    }
+}
+@media (max-width: 990px){
+    .services-container{
+        margin-left: 0px;
+       .text{
+            width: 450px;
+       }
+    }
+}

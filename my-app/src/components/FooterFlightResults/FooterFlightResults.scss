@@ -86,3 +86,70 @@ h4{
     }
     }
 }
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .FooterFlightResults{
+        .footer-container{
+            width: 960px;
+        }
+    }
+}
+
+@media (max-width: 990px){
+    .FooterFlightResults{
+        .footer-container{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .logo-container{
+                width: 100%;
+                padding-top: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .logo{
+                    img{
+                        width: 400px;
+                    }
+                }
+                .detail-company{
+                    width: 88%;
+                    display: flex;
+                    justify-content: center;
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+            .travel-mate-list, .explore-list, .book-list{
+                text-align: center;
+            }
+            .section-subscription{
+                width: 95%;
+                height: 200px;
+                margin-top: 15px;
+                .container-subscription{
+                    width: 90%;
+                    height: 90%;
+                    justify-content: center;
+                    h3, p{
+                        text-align: center;
+                    } 
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        margin-bottom: 15px;
+                        input{
+                            width: 90%;
+                        }
+                        button{
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

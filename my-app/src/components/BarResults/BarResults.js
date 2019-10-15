@@ -3,6 +3,7 @@ import './BarResults.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import ModalDropdown from './ModalDropdown/ModalDropdown'
+import BarResponsive from './BarResultsResponsive/BarResponsive/BarResponsive'
 
 class BarResults extends React.Component {
     state = {
@@ -32,7 +33,7 @@ class BarResults extends React.Component {
                             <li className='more-item' onClick={this.toggleDropdown}><a href='#' className='more-item-a'>More  <FontAwesomeIcon icon={faCaretDown} /> </a> </li>
                         </ul>
                     </div>
-
+                    
                 </div>
 
                 {

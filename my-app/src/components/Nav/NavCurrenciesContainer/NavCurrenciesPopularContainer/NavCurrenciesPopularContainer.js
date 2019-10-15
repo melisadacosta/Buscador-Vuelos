@@ -1,6 +1,6 @@
 import React from 'react'
 import NavCurrenciesPopular from 'components/Nav/NavCurrenciesPopular/NavCurrenciesPopular'
-import './NavCurrenciesPopularContainer.scss'
+
 
 class NavCurrenciesPopularContainer extends React.Component {
     state = {
@@ -10,7 +10,7 @@ class NavCurrenciesPopularContainer extends React.Component {
         fetch('https://adantrip-api.now.sh/currencies')
             .then(response => response.json())
             .then(data =>
-                this.setState({ popularcurrencies: data.popular}))
+                this.setState({ popularcurrencies: data.popular }))
     }
     render() {
         return (

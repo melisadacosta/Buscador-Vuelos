@@ -26,3 +26,19 @@
     }
 }
 
+@media (min-width: 990px) and (max-width: 1200px){
+    .AdvertisementAside{
+        width: 170px;
+        .advertisement{
+            img{
+                width: 160px;
+            }
+    }
+}
+}
+
+@media (max-width: 990px){
+    .AdvertisementAside{
+        display: none;
+    }
+}

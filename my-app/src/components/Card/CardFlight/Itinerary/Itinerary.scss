@@ -84,3 +84,14 @@ align-items: center;
 }
 }
 }
+
+@media (max-width: 990px){
+    .Itinerary {
+        .flight-path-line{
+            width: 600px;
+    }
+    .intermediate-flight{
+        left: 300px;
+    }
+}
+}

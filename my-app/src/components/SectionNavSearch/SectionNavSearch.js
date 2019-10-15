@@ -6,7 +6,6 @@ import { INPUT_SIZES } from 'components/Input/Input';
 import Nav from 'components/Nav/Nav'
 import NavResponsive from 'components/Nav/NavResponsive/NavResponsive'
 
-
 class SectionNavSearch extends React.Component {
     render() {
         return (

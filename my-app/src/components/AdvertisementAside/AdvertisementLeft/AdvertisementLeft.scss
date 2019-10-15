@@ -26,3 +26,13 @@
     }
 }
 
+@media (min-width: 990px) and (max-width: 1200px){
+    .AdvertisementLeft{
+        width: 180px;
+        .advertisement{
+            img{
+                width: 165px;
+            }
+    }
+}
+}

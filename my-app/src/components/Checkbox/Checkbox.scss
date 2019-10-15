@@ -89,3 +89,12 @@
 .margin{
   margin-bottom: 15px;
 }
+
+@media (min-width: 990px) and (max-width: 1200px){
+  .items-column{
+
+  .items{
+    width: 150px;
+  }
+}
+}

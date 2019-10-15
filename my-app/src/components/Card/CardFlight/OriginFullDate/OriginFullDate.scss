@@ -47,3 +47,11 @@
         }
     }
 }
+
+@media (max-width: 990px){
+    .time-date-container{
+        flex-direction: row;
+        width: 390px;
+        justify-content: space-around;
+    }
+}

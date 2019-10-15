@@ -3,12 +3,12 @@ import './NavCurrenciesPopular.scss'
 
 const NavCurrenciesPopular = ({ popularcurrency }) => (
     <div className='NavCurrenciesPopular'>
-            <ul>
-                <li>
-                    <span>{popularcurrency.code}</span>
-                    <p>{popularcurrency.title}</p>
-                </li>
-            </ul>
+        <ul>
+            <li>
+                <span>{popularcurrency.code}</span>
+                <p>{popularcurrency.title}</p>
+            </li>
+        </ul>
     </div>
 )
 

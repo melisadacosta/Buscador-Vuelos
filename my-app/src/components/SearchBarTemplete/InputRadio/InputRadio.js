@@ -1,7 +1,7 @@
 import React from 'react'
 import './InputRadio.scss'
 
-const InputRadio = ({className}) => (
+const InputRadio = ({ className }) => (
     <div className='RadioContainer'>
         <div className='input-check'>
             <label className={className}>

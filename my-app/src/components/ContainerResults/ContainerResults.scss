@@ -14,4 +14,46 @@
         width: 650px;
 
     }
+    .BarResponsiveActive{
+        display: none;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .ContainerResults{
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    
+    .list-results{
+        width: 550px;
+        margin: 0px 10px;
+    }
+    .container-checkboxs{
+        width: 175px;
+        
+    }
+}
+}
+
+@media (max-width: 990px){
+    .container-checkboxs{
+        display: none;
+    }
+}
+
+@media (max-width: 990px){
+    .ContainerResults{
+        width: 100%;
+    .list-results{
+        width: 95%;
+        position: relative;
+        top: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        .BarResponsiveActive{
+            display: block;
+        }
+    }
+}
 }

@@ -58,3 +58,9 @@
   font-family: $main-font;
   margin-bottom: 25px;
 }
+
+@media (min-width: 990px) and (max-width: 1200px){
+  .input-range{
+    width: 155px;
+  }
+}

@@ -10,7 +10,7 @@ class NavCurrenciesContainer extends React.Component {
         fetch('https://adantrip-api.now.sh/currencies')
             .then(response => response.json())
             .then(data =>
-                this.setState({ currencies: data.all}))
+                this.setState({ currencies: data.all }))
     }
     render() {
         return (

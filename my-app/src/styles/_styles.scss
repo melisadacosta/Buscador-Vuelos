@@ -41,3 +41,10 @@ $color-flags: #7A7A7A;
       display: none;
     }
 }
+
+@media (max-width: 990px){
+  .footer-flightsresults{
+    position: relative;
+    top: 250px;
+  }
+}

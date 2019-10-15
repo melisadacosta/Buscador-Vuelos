@@ -12,7 +12,7 @@ class NavLanguageContainer extends React.Component {
       .then(data =>
         this.setState({ languages: data }))
   }
-  
+
   render() {
     return (
       <div className='languages-container'>
@@ -26,6 +26,6 @@ class NavLanguageContainer extends React.Component {
     )
   }
 }
-// {/* <div onClick={this.componentLanguage}>Cargar</div> */}
+
 
 export default NavLanguageContainer;

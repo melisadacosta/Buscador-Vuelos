@@ -1,14 +1,11 @@
 import React from 'react'
 import './index.css'
-// import Nav from 'components/Nav/Nav';
-// import Flights from 'components/Flights/Flights';
 import NoMatch from 'components/Views/NoMatch'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from 'components/Views/Home';
 import FlightsResults from 'components/Views/FlightsResults';
 import BookingFlight from 'components/Views/BookingFlight';
 import './styles/_styles.scss';
-import Nav from 'components/Nav/Nav';
 import SearchBarContextProvider from 'components/Contexts/SearchBarContext';
 import InputContextProvider from 'components/Contexts/InputContext';
 

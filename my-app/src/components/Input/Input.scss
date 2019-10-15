@@ -75,17 +75,17 @@
 
 
     @media (min-width: 990px) and (max-width: 1200px){
-        .small{
+        .small, .small-results{
             width: 140px;
         }
-        .big{
+        .big, .big-results{
             width: 185px;
         }
     }
     
     @media (max-width: 990px){
-        .big, .small{
-            max-width: 720px;
+        .big, .small, .big-results, .small-results {
+            // max-width: 720px;
             border: 1px solid #ffffff;
             border-radius: 3px;
             margin-bottom: 20px;

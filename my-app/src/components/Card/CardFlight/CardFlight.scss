@@ -45,3 +45,24 @@
     margin-bottom: 15px;
 }
 }
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .CardFlight{
+        width: 520px;
+    }
+}
+
+@media (max-width: 990px){
+    .CardFlight{
+        align-items: center;
+        height: 600px;
+        .origin-flight-container, .return-flight-container{
+            flex-direction: column;
+            height: 200px;
+        }
+        .AirlineCode{
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}

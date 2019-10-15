@@ -9,14 +9,6 @@ const NavCurrencies = ({ currency }) => (
                 <p>{currency.title}</p>
             </li>
         </ul>
-        {/* <div className='popular'>
-            <ul>
-                <li>
-                    <span>{popularcurrency.code}</span>
-                    <p>{popularcurrency.title}</p>
-                </li>
-            </ul>
-        </div> */}
     </div>
 )
 

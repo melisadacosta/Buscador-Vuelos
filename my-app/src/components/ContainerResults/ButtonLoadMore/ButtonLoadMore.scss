@@ -1,6 +1,7 @@
 @import '../../../styles/styles';
 
 .ButtonLoadMore{
+    margin-bottom: 15px;
     .search-more{
         button{
             width: 660px;
@@ -16,6 +17,26 @@
             &:hover{
                 background: #404040;
                 color: #fff;
+            }
+        }
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+    .ButtonLoadMore{
+        .search-more{
+            button{
+                width: 560px;
+            }
+        }
+    }
+}
+
+@media (max-width: 990px){
+    .ButtonLoadMore{
+        .search-more{
+            button{
+                width: 100%;
             }
         }
     }
